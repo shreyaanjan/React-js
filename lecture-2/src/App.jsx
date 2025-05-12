@@ -1,5 +1,5 @@
-import Button from "./Buttons.jsx";
 import Card from "./Card.jsx";
+import Counter from "./Counter.jsx";
 
 const App = () => {
   let aboutDesc = "This is something related to ABOUT Section !";
@@ -14,13 +14,16 @@ const App = () => {
       <div className="container">
         <div className="row my-5">
           <div className="col-4">
-            <Card cardName="About" desc={aboutDesc} color="primary" img={aboutImg} />
+            <Card cardName="About" desc={aboutDesc} color="warning" img={aboutImg} />
           </div>
           <div className="col-4">
             <Card cardName="Services" desc={serviceDesc} color="success" img={serviceImg} />
           </div>
           <div className="col-4">
-            <Card cardName="Contact" desc={contactDesc} color="warning" img={contactImg} />
+            <Card cardName="Contact" desc={contactDesc} color="primary" img={contactImg} />
+          </div>
+          <div className="mt-3">
+            <Counter />
           </div>
         </div>
       </div>
