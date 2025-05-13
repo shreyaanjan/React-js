@@ -6,12 +6,8 @@ const Hero = () => {
         <section>
             <div className="container">
                 <div className="row">
-                    <div className="col-6">
-                        <LeftSide />
-                    </div>
-                    <div className="col-6">
-                        <RightSide />
-                    </div>
+                    <LeftSide/>
+                    <RightSide/>
                 </div>
             </div>
         </section>

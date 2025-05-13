@@ -19,7 +19,7 @@ const Header = () => {
                         <li><i className="bi bi-instagram" /></li>
                     </ul>
                     <button type="button" className="contact-btn text-uppercase">
-                        <i class="bi bi-chat-left-dots"></i>Contact US
+                        <i className="bi bi-chat-left-dots"></i>Contact US
                     </button>
                 </div>
             </nav>
