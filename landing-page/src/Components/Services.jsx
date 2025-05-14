@@ -34,7 +34,7 @@ const Services = () => {
     }
   ]
   return (
-    <div className="service-sect">
+    <section className="service-sect">
       <div className="container">
         <div className="row gy-5">
           {arr.map((item) => {
@@ -42,8 +42,7 @@ const Services = () => {
           })}
         </div>
       </div>
-    </div>
-
+    </section>
   )
 }
 

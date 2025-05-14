@@ -2,7 +2,7 @@ const RightSide = () => {
   return (
     <div className="col-6">
       <div>
-        <img src="https://leverage-html.codings.dev/assets/images/hero-8.jpg" alt="man" className="img-fluid object-fit-cover" />
+        <img src="/public/image/hero-8.webp" alt="man" className="object-fit-cover" width={'90%'}/>
       </div>
     </div>
   )

@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    list-style: none !important;
+    text-decoration: none !important;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #030303;
+}
+
+.navbar {
+    padding: 20px 25px;
+}
+
+.logo-name {
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+.version {
+    margin-inline-start: 5px;
+    font-size: 12px;
+    color: #dd1e4b;
+    font-style: initial;
+    font-weight: bold;
+}
+
+.contact-btn {
+    padding: 10px 25px;
+    border: 2px solid #dd1e4b;
+    background-color: black;
+    color: white;
+}
+
+.contact-btn i {
+    margin-inline-end: 10px;
+}
+
+.menu {
+    font-weight: 600;
+}
+
+.hero-title h1 {
+    padding-block-start: 120px;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 6rem;
+    line-height: 1.2;
+    color: #dd1e4b;
+    word-wrap: break-word;
+    font-weight: 900;
+    background-image: linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%) !important;
+}
+
+.hero-title p {
+    color: #6f6f6f;
+    font-size: 20px;
+}
+
+.service-sect,
+.portfolio-sect,
+.customer-sect, .news-section {
+    padding-block: 120px;
+}
+
+.card-title i {
+    color: #dd1e4b;
+}
+
+.card-body {
+    background-color: black;
+}
+
+.customer-sect h2,
+.portfolio-sect h2 {
+    font-size: 48px;
+}
+
+.card-title2 {
+    color: #f5f5f5;
+}
+
+.card-text2 {
+    color: #8e8e8e;
+}
+
+.stars {
+    color: #dd1e4b;
+}
+
+.card-body2 {
+    background-color: #191919;
+    border: none;
+    padding: 20px 12px;
+}
+
+.text-max-800 {
+    max-width: 800px;
+    margin: auto;
+}
+
+.card-body3 {
+    background-color: #191919;
+    border: none;
+    padding: 30px;
+}
+
+.card-body3 p {
+    color: #8e8e8e;
+}
+
+.card-body3 {
+    position: relative;
+}
+
+.left-effect:before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    width: 50%;
+    height: 50%;
+    border: none;
+    background-image: -webkit-linear-gradient(45deg, #E0040B 15%, #dd1e4b 65%);
+    background-image: linear-gradient(45deg, #E0040B 15%, #dd1e4b 65%);
+    transition-timing-function: cubic-bezier(.25, .25, .75, .75);
+    transition-duration: 0.4s;
+    transition-property: opacity, transform;
+    top: -15px;
+    right: 0;
+    bottom: 0;
+    left: -13px;
+}
+
+.right-effect:after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    width: 50%;
+    height: 50%;
+    border: none;
+    background-image: -webkit-linear-gradient(45deg, #E0040B 15%, #dd1e4b 65%);
+    background-image: linear-gradient(45deg, #E0040B 15%, #dd1e4b 65%);
+    transition-timing-function: cubic-bezier(.25, .25, .75, .75);
+    transition-duration: 0.4s;
+    transition-property: opacity, transform;
+    right: -14px;
+    bottom: -13px;
+}
+.card-body3{
+    position: relative;  
+}
+
+.portCard:hover .card-body3{
+    background: linear-gradient(45deg, #E0040B 15%, #dd1e4b 65%);
+}
+.portCard{
+    transition: 0.3s all linear;
+}
+.portCard:hover{
+    transform: translateY(-7.5px);
+}
+.portCard .left-effect:before{
+    transition: 0.3s all linear;
+}
+.portCard:hover .left-effect:before{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;  
+}
+.portCard .right-effect:after{
+    transition: 0.3s all linear;
+}
+.portCard:hover .right-effect:after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;  
+}
+.card-body3:hover p{
+    color: white;
+}
+.border{
+    position: relative;
+}
+section{
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+    position: relative;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100px;
+    background: linear-gradient(180deg,rgba(221, 30, 75, 1) 0%, rgba(224, 4, 11, 1) 100%);
+    bottom: -6%;
+    left: 50%;
+}

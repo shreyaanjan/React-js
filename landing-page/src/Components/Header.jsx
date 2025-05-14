@@ -7,13 +7,13 @@ const Header = () => {
                         Leverage
                         <i className="version">2.1</i>
                     </a>
-                    <ul className="d-flex align-items-center gap-3 text-white menu m-0">
+                    <ul className="d-flex align-items-center gap-5 text-white menu m-0">
                         <li>Home</li>
                         <li>Services</li>
                         <li>Portfolio</li>
                         <li>Testimonials</li>
                     </ul>
-                    <ul className="text-white d-flex align-items-center gap-3 m-0">
+                    <ul className="text-white d-flex align-items-center gap-5 m-0">
                         <li><i className="bi bi-search" /></li>
                         <li><i className="bi bi-twitter" /></li>
                         <li><i className="bi bi-instagram" /></li>
