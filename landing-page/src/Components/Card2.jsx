@@ -3,7 +3,7 @@ import React from 'react'
 const Card2 = (props) => {
   return (
     <div className="col-3">
-      <div className="" style={{ width: '18rem' }}>
+      <div className="">
         <div className="card-body2 text-center">
           <img src={props.img} className="rounded-circle mt-3" />
           <h5 className="card-title2 my-4 fw-semibold">{props.name}</h5>
