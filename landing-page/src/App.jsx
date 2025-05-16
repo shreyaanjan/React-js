@@ -6,6 +6,7 @@ import Newsletter from "./Components/Newsletter";
 import Portfolio from "./Components/Portfolio";
 import Services from "./Components/Services";
 import SignUp from "./Components/SignUp";
+import Video from "./Components/Video";
 
 
 const App = ()=>{
@@ -15,6 +16,7 @@ const App = ()=>{
             <Hero/>
             <Services/>
             <Portfolio/>
+            <Video/>
             <Customer/>
             <Newsletter/>
             <SignUp/>

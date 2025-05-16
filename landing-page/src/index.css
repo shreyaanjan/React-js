@@ -65,7 +65,8 @@ body {
 .portfolio-sect,
 .customer-sect,
 .news-section,
-.signSection {
+.signSection,
+footer {
     padding-block: 120px;
 }
 
@@ -73,9 +74,9 @@ body {
     color: #dd1e4b;
 }
 
-.card-body {
+/* .card-body {
     background-color: black;
-}
+} */
 
 .title {
     font-size: 48px;
@@ -209,6 +210,7 @@ section::before {
     background: linear-gradient(180deg, rgba(221, 30, 75, 1) 0%, rgba(224, 4, 11, 1) 100%);
     bottom: -7%;
     left: 50%;
+    z-index: 99;
 }
 
 .name {
@@ -270,6 +272,46 @@ input::placeholder {
     background-color: #e0040b !important;
 }
 
-.line::after{
+.line::after {
     background-color: #191919;
+}
+
+.logo h2 {
+    color: #df102a;
+}
+
+.video {
+    height: 200px;
+    width: 200px;
+}
+
+.video-play {
+    height: 600px;
+    width: 99vw !important;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-play::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 9;
+    top: 0;
+    opacity: 0.5;
+}
+
+.brand p{
+    line-height: 1.85;
+    color: #8e8e8e;
+}
+
+.icons i{
+    color: #c50714;
+}
+
+.touch-sect, .services li{
+    color: #8e8e8e;
 }

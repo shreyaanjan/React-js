@@ -36,7 +36,7 @@ const Services = () => {
   return (
     <section className="service-sect">
       <div className="container">
-        <div className="row gy-5">
+        <div className="row gy-5 ">
           {arr.map((item) => {
             return <Card icon={item.icon} title={item.title} desc={item.desc} />
           })}
