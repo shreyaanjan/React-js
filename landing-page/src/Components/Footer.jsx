@@ -8,7 +8,7 @@ const Footer = () => {
                             <div className="logo">
                                 <h2>Leverage.</h2>
                             </div>
-                            <p>
+                            <p className="my-4">
                                 Authentic and innovative.
                                 <br />
                                 Built to the smallest detail
@@ -26,7 +26,7 @@ const Footer = () => {
                     <div className="col-3">
                         <div className="touch-sect">
                             <h4 className="text-white fw-semibold">Get in Touch</h4>
-                            <ul className="m-0 p-0">
+                            <ul className="m-0 p-0 my-4">
                                 <li className="my-3">
                                     <i class="bi bi-telephone me-3"></i>
                                     <span>
@@ -52,18 +52,26 @@ const Footer = () => {
                     <div className="col-3">
                         <div className="services">
                             <h4 className="text-white fw-semibold">Our Services</h4>
-                            <ul className="m-0 pt-3 p-0">
-                                <li className="my-2">Website Development</li>
-                                <li className="my-2">Building Applications</li>
-                                <li className="my-2">SEO & Digital Marketing</li>
-                                <li className="my-2">Branding and Identity</li>
-                                <li className="my-2">Digital Images & Videos</li>
+                            <ul className="m-0 p-0">
+                                <li className="my-3">Website Development</li>
+                                <li className="my-3">Building Applications</li>
+                                <li className="my-3">SEO & Digital Marketing</li>
+                                <li className="my-3">Branding and Identity</li>
+                                <li className="my-3">Digital Images & Videos</li>
                             </ul>
                         </div>
                     </div>
                     <div className="col-3">
                         <div className="tags">
                             <h4 className="text-white fw-semibold">Popular Tags</h4>
+                            <a href="#" className="badge">Mobile</a>
+                            <a href="#" className="badge">Development</a>
+                            <a href="#" className="badge">Technology</a>
+                            <a href="#" className="badge">App</a>
+                            <a href="#" className="badge">Education</a>
+                            <a href="#" className="badge">Business</a>
+                            <a href="#" className="badge">Health</a>
+                            <a href="#" className="badge">Industry</a>
                         </div>
                     </div>
                 </div>
