@@ -324,7 +324,6 @@ input::placeholder {
     border-radius: 2px;
     border: 1px solid rgba(255, 255, 255, 0.25);
     color: #8e8e8e;
-    ;
     line-height: 1.5;
     font-size: 16px;
     font-weight: 400;
@@ -341,6 +340,8 @@ video {
 
 .videotitle {
     color: #dd1e4b;
+    font-size: 96px;
+    font-weight: 900;
 }
 
 .z-index {
@@ -361,4 +362,20 @@ video {
     .progressbar div::after {
      display: none;
     }
+}
+
+.contact-btn2 {
+    padding: 10px 25px;
+    border: 2px solid #dd1e4b;
+    background-color: #dd1e4b;
+    color: white;
+}
+
+.contact-btn2 i {
+    margin-inline-end: 10px;
+}
+
+.videodesc{
+    color: #8e8e8e;
+    font-size: 24px;
 }

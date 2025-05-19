@@ -11,9 +11,9 @@ const Video = () => {
                     <div className='d-flex justify-content-center align-items-center vh-100'>
                         <div className='position-relative  z-index '>
                             <h2 className='videotitle text-center'>ARE YOU READY?</h2>
-                            <p className='text-center text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, placeat natus. Aspernatur modi repellat dicta laborum voluptate temporibus quia necessitatibus rem esse cumque odio, ut repellendus tempore veritatis molestiae nobis.</p>
+                            <p className='text-center videodesc'>We are driven by creativity. We create innovative things to help you achieve better results and consolidate yourself in the market.</p>
                             <div className='text-center'>
-                                <button className='contact-btn'>Contact us</button>
+                                <button className='contact-btn2'><i className="bi bi-rocket-takeoff"></i>Contact us</button>
                             </div>
                         </div>
                     </div>
