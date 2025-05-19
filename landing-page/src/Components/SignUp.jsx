@@ -7,8 +7,8 @@ const SignUp = () => {
     return (
         <section className="signSection">
             <div className="container">
-                <div className="d-flex gap-5">
-                    <div className="col-6">
+                <div className="row gy-5">
+                    <div className="col-xl-6 col-12">
                         <Title title={title} desc={desc} />
                         <ul className="progressbar d-flex gap-4 align-items-center">
                             <div>
@@ -31,9 +31,9 @@ const SignUp = () => {
                             <button className="subsBtn text-white text-uppercase d-flex align-items-center gap-2">Next<i className="bi bi-arrow-right-circle"></i></button>
                         </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-xl-6 col-12">
                         <div>
-                            <img src="/public/image/about-8.webp" alt="laptop" className="img-fluid"/>
+                            <img src="/public/image/about-8.webp" alt="laptop" width={'100%'} className=""/>
                         </div>
                     </div>
                 </div>

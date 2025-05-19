@@ -2,8 +2,8 @@ const Footer = () => {
     return (
         <footer>
             <div className="container">
-                <div className="row">
-                    <div className="col-3">
+                <div className="row gy-5">
+                    <div className="col-md-3 col-sm-6 col-12">
                         <div className="brand">
                             <div className="logo">
                                 <h2>Leverage.</h2>
@@ -23,7 +23,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-3">
+                    <div className="col-md-3 col-sm-6 col-12">
                         <div className="touch-sect">
                             <h4 className="text-white fw-semibold">Get in Touch</h4>
                             <ul className="m-0 p-0 my-4">
@@ -49,7 +49,7 @@ const Footer = () => {
                             <button type="button" class="contact-btn text-uppercase"><i class="bi bi-chat-left-dots"></i>Send a message</button>
                         </div>
                     </div>
-                    <div className="col-3">
+                    <div className="col-md-3 col-sm-6 col-12">
                         <div className="services">
                             <h4 className="text-white fw-semibold">Our Services</h4>
                             <ul className="m-0 p-0">
@@ -61,7 +61,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-3">
+                    <div className="col-md-3 col-sm-6 col-12">
                         <div className="tags">
                             <h4 className="text-white fw-semibold">Popular Tags</h4>
                             <a href="#" className="badge">Mobile</a>

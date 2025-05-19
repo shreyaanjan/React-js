@@ -48,7 +48,7 @@ body {
     padding-block-start: 120px;
     margin-top: 0;
     margin-bottom: 1.5rem;
-    font-size: 6rem;
+    /* font-size: 6rem; */
     line-height: 1.2;
     color: #dd1e4b;
     word-wrap: break-word;
@@ -163,6 +163,7 @@ footer {
 
 .portCard {
     transition: 0.3s all linear;
+    height: 100%;
 }
 
 .portCard:hover {
@@ -338,9 +339,26 @@ video {
     object-fit: cover;
 }
 
-.videotitle{
+.videotitle {
     color: #dd1e4b;
 }
-.z-index{
+
+.z-index {
     z-index: 10;
+}
+
+
+@media (max-width:992px) {
+    section::before {
+        display: none !important;
+    }
+}
+@media (max-width:762px) {
+
+}
+
+@media (max-width:576px) {
+    .progressbar div::after {
+     display: none;
+    }
 }
