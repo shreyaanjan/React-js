@@ -10,19 +10,19 @@ const SignUp = () => {
                 <div className="row gy-5">
                     <div className="col-xl-6 col-12">
                         <Title title={title} desc={desc} />
-                        <ul className="progressbar d-flex gap-4 align-items-center">
-                            <div>
-                            <li className="active text-white bg-red">1</li>
-                                <p className="text-white">Personal Details</p>
-                            </div>
-                            <div>
-                            <li className="active text-white line">2</li>
-                                <p className="text-white">Company Budget</p>
-                            </div>
-                            <div>
-                            <li className="active text-white line">3</li>
-                                <p className="text-white">Service Setup</p>
-                            </div>
+                        <ul className="progressbar d-flex align-items-center justify-content-center list-unstyled m-0 p-0">
+                            <li className="step active">
+                                <div className="circle">1</div>
+                                <p>Personal Details</p>
+                            </li>
+                            <li className="step">
+                                <div className="circle">2</div>
+                                <p>Company Budget</p>
+                            </li>
+                            <li className="step">
+                                <div className="circle">3</div>
+                                <p>Service Setup</p>
+                            </li>
                         </ul>
                         <div>
                             <input type="email" placeholder="Email" className="form-control name my-4" />
@@ -33,7 +33,7 @@ const SignUp = () => {
                     </div>
                     <div className="col-xl-6 col-12">
                         <div>
-                            <img src="/public/image/about-8.webp" alt="laptop" width={'100%'} className=""/>
+                            <img src="/public/image/about-8.webp" alt="laptop" width={'100%'} className="" />
                         </div>
                     </div>
                 </div>

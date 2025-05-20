@@ -233,62 +233,67 @@ input::placeholder {
     border: none;
 }
 
-.progressbar li {
-    position: relative;
+.progressbar {
+  position: relative;
+  counter-reset: step;
 }
 
-.progressbar li {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    display: block;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-align: center;
-    color: #2f323a;
-    background-color: #191919;
-    border-radius: 100px;
-    margin: 0 auto 10px auto;
+.progressbar .step {
+  text-align: center;
+  position: relative;
+  flex: 1;
 }
 
-
-.progressbar div {
-    position: relative;
-    width: 150px;
+.progressbar .step .circle {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: #191919;
+  color: white;
+  font-weight: bold;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
 }
 
-.progressbar div::after {
-    content: '';
-    width: 300px;
-    height: 6px;
-    background-color: #E0040B;
-    position: absolute;
-    left: -45%;
-    top: 17px;
-    z-index: -1;
+.progressbar .step.active .circle {
+  background-color: #E0040B;
 }
 
-
-.bg-red {
-    background-color: #e0040b !important;
+.progressbar .step p {
+  margin-top: 8px;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 
-.line::after {
-    background-color: #191919;
+/* Connecting line */
+.progressbar .step::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 100%;
+  height: 4px;
+  background-color: #191919;
+  z-index: 0;
 }
+
+.progressbar .step.active::after {
+  background-color: #E0040B;
+}
+
+.progressbar .step:last-child::after {
+  display: none;
+}
+
 
 .logo h2 {
     color: #df102a;
 }
 
-.video {
-    height: 200px;
-    width: 200px;
-}
-
 .video-play {
-    height: 600px;
-    /* width: 99vw !important; */
     overflow: hidden;
     position: relative;
 }
@@ -371,6 +376,12 @@ video {
     color: white;
 }
 
+.contact-btn:hover{
+    background-color: #dd1e4b;
+    background-image: linear-gradient(45deg, #E0040B 15%, #dd1e4b 65%) !important;
+    color: white;
+}
+
 .contact-btn2 i {
     margin-inline-end: 10px;
 }
@@ -378,4 +389,40 @@ video {
 .videodesc{
     color: #8e8e8e;
     font-size: 24px;
+    max-width: 900px;
+    margin: 24px 61.5px 32px;
+}
+
+.contact-btn2:hover{
+    background-color: #dd1e4b;
+    background-image: linear-gradient(45deg, #E0040B 15%, #dd1e4b 65%) !important;
+    color: white;
+}
+
+.subsBtn:hover{
+    background-color: #dd1e4b;
+    background-image: linear-gradient(45deg, #E0040B 15%, #dd1e4b 65%) !important;
+    color: white;
+}
+
+.touch-sect ul li:hover{
+    color: #dd1e4b;
+    outline: none;
+    cursor: pointer;
+}
+
+.services ul li:hover{
+    color: #dd1e4b;
+    outline: none;
+    cursor: pointer;
+}
+
+.tags .badge:hover{
+    color: #dd1e4b;
+    border: 1px solid #dd1e4b;
+}
+
+.navbar ul li:hover {
+    color: #dd1e4b;
+    cursor: pointer;
 }
