@@ -2,8 +2,8 @@ const Footer = () => {
     return (
         <footer>
             <div className="container">
-                <div className="row gy-5">
-                    <div className="col-md-3 col-sm-6 col-12">
+                <div className="row gy-5 text-center text-md-start justify-content-center">
+                    <div className="col-md-3 col-sm-6 col-12 mx-auto">
                         <div className="brand">
                             <div className="logo">
                                 <h2>Leverage.</h2>
@@ -15,7 +15,7 @@ const Footer = () => {
                                 with a focus on usability
                                 and performance.
                             </p>
-                            <div className="icons d-flex align-items-center gap-5">
+                            <div className="icons d-flex justify-content-center justify-content-md-start align-items-center gap-4">
                                 <i class="bi bi-instagram fs-5"></i>
                                 <i class="bi bi-facebook fs-5"></i>
                                 <i class="bi bi-linkedin fs-5"></i>
@@ -23,7 +23,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-3 col-sm-6 col-12">
+                    <div className="col-md-3 col-sm-6 col-12 mx-auto">
                         <div className="touch-sect">
                             <h4 className="text-white fw-semibold">Get in Touch</h4>
                             <ul className="m-0 p-0 my-4">
@@ -49,7 +49,7 @@ const Footer = () => {
                             <button type="button" class="contact-btn text-uppercase"><i class="bi bi-chat-left-dots"></i>Send a message</button>
                         </div>
                     </div>
-                    <div className="col-md-3 col-sm-6 col-12">
+                    <div className="col-md-3 col-sm-6 col-12 mx-auto">
                         <div className="services">
                             <h4 className="text-white fw-semibold">Our Services</h4>
                             <ul className="m-0 p-0">
@@ -61,7 +61,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-md-3 col-sm-6 col-12">
+                    <div className="col-md-3 col-sm-6 col-12 mx-auto">
                         <div className="tags">
                             <h4 className="text-white fw-semibold">Popular Tags</h4>
                             <a href="#" className="badge">Mobile</a>
