@@ -30,10 +30,10 @@ const Users = () => {
                 }}>Click</button>
             </div>
 
-            {/* <div>
+            <div>
                 <h2>{userData.name}</h2>
                 <img src={userData.avatar_url} alt="" width={100} />
-            </div> */}
+            </div>
         </div>
     )
 }
