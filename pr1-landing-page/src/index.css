@@ -98,6 +98,22 @@ footer {
     background-color: #191919;
     border: none;
     padding: 20px 12px;
+    color: #8e8e8e;
+    transition-duration: 0.4s;
+    transition-property: opacity, transform;
+}
+
+.card-body2:hover {
+    background: linear-gradient(45deg, #E0040B 15%, #dd1e4b 65%);
+    transform: translateY(-7.5px);
+}
+
+.card-body2:hover p {
+    color: white;
+}
+
+.card-body2:hover .stars i {
+    color: white;
 }
 
 .text-max-800 {
@@ -164,6 +180,7 @@ footer {
 .portCard {
     transition: 0.3s all linear;
     height: 100%;
+    cursor: pointer;
 }
 
 .portCard:hover {
@@ -428,4 +445,19 @@ video {
 .navbar ul li:hover {
     color: #dd1e4b;
     cursor: pointer;
+}
+
+.form-control:focus {
+    background: none;
+    box-shadow: none;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+input {
+    caret-color: white;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
