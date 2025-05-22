@@ -20,15 +20,15 @@ const Users = () => {
 
     return (
         <div>
-            <h2 className="text-center my-5">Github Users Profile</h2>
-            <div className="container mx-auto">
-                <input type="text" className="border border-indigo-800" onChange={(e)=>{
+            <h2 className="text-center text-white text-2xl font-mono my-5">Github User Search</h2>
+            <div className="container mx-auto flex justify-center items-center">
+                <input type="text" className=" text-white w-1/2 py-2 bg-[#1f2a48] rounded-lg" placeholder="Search Github Username.." onChange={(e)=>{
                     setUserName(e.target.value);
                 }}/>
-                <button type="button" className="bg-indigo-400 py-1 px-4 text-white rounded mx-3" onClick={()=>{
+                <button type="button" className="bg-blue-600 py-2.5 px-5 text-white rounded mx-3" onClick={()=>{
                     setQuery(userName);
-                }}>Click</button>
-            </div>
+                }}>Search</button>
+            </div>  
 
             <div>
                 <h2>{userData.name}</h2>
