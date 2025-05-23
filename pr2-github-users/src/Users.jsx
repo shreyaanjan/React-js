@@ -8,11 +8,9 @@ const Users = () => {
     const [userName, setUserName] = useState(defaultUser);
     const [query, setQuery] = useState(defaultUser);
     const [userData, setUserData] = useState("");
-    const [downloadBtn, setDownloadBtn] = useState(true);
 
     const handleCaptureClick = () => {
-        setDownloadBtn(false);
-        
+
         if (captureRef.current) {
             domtoimage.toPng(captureRef.current)
                 .then((dataUrl) => {
@@ -23,9 +21,6 @@ const Users = () => {
                 })
                 .catch((error) => {
                     console.error('Error capturing image:', error);
-                })
-                .finally(() => {
-                    setDownloadBtn(true);
                 })
         }
     }
@@ -53,13 +48,13 @@ const Users = () => {
                         setUserName(e.target.value);
                     }}
                     />
-                    <button type="button" className="absolute top-2 right-2 bg-blue-600 py-1 px-4 text-white rounded-lg" onClick={() => {
+                    <button type="button" className="absolute top-2 right-2 bg-blue-600 hover:bg-blue-700 py-1 px-4 text-white rounded-lg" onClick={() => {
                         setQuery(userName);
                     }}>Search</button>
                 </div>
             </div>
             <div className="container mx-auto flex justify-center items-center pt-6">
-                <div className="bg-[#1f2a48] w-[500px] p-6 rounded-lg" ref={captureRef}>
+                <div className="bg-[#1f2a48] w-[610px] p-6 rounded-lg" ref={captureRef}>
                     <div className="flex justify-between">
                         <div className="flex gap-6">
                             <img src={userData.avatar_url} alt="avatar" className="border rounded-full w-20 h-20" />
@@ -69,7 +64,7 @@ const Users = () => {
                                 <p className="pt-5 text-gray-300">{userData.bio || "This user has no Bio."}</p>
                             </div>
                         </div>
-                        <p>Joined {new Date(userData.created_at).toDateString()}</p>
+                        <p className='text-gray-300'>Joined {new Date(userData.created_at).toDateString()}</p>
                     </div>
                     <div className="bg-[#141c2f] rounded-lg p-3 mt-6 flex justify-around text-center">
                         <div>
@@ -97,14 +92,12 @@ const Users = () => {
                             </svg>{userData.twitter_username || "Not Available"}
                         </p>
                     </div>
-                    {
-                        downloadBtn && (
-                            <div className="text-center mt-3">
-                                <button type="button" className="bg-blue-600 w-70 py-1 px-4 text-white rounded-lg" onClick={handleCaptureClick}>Download</button>
-                            </div>
-                        )
-                    }
+
                 </div>
+
+            </div>
+            <div className="text-center mt-6">
+                <button type="button" className="bg-blue-600 hover:bg-blue-700 w-40 py-2 px-4 text-white rounded-lg" onClick={handleCaptureClick}>Download</button>
             </div>
         </div>
     )
