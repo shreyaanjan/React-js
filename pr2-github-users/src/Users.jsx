@@ -4,7 +4,15 @@ import { useEffect, useState, useRef } from "react"
 const Users = () => {
     const captureRef = useRef(null);
 
+    const defaultUser = "shreyaanjan"
+    const [userName, setUserName] = useState(defaultUser);
+    const [query, setQuery] = useState(defaultUser);
+    const [userData, setUserData] = useState("");
+    const [downloadBtn, setDownloadBtn] = useState(true);
+
     const handleCaptureClick = () => {
+        setDownloadBtn(false);
+        
         if (captureRef.current) {
             domtoimage.toPng(captureRef.current)
                 .then((dataUrl) => {
@@ -15,13 +23,13 @@ const Users = () => {
                 })
                 .catch((error) => {
                     console.error('Error capturing image:', error);
-                });
+                })
+                .finally(() => {
+                    setDownloadBtn(true);
+                })
         }
     }
-    const defaultUser = "shreyaanjan"
-    const [userName, setUserName] = useState(defaultUser);
-    const [query, setQuery] = useState(defaultUser);
-    const [userData, setUserData] = useState("");
+
 
     useEffect(() => {
         if (!query) return;
@@ -78,12 +86,24 @@ const Users = () => {
                         </div>
                     </div>
                     <div className="flex justify-around mt-6 text-gray-300">
-                        <p className="flex gap-2"><i class="bi bi-geo-alt-fill"></i>{userData.location || "Not Available"}</p>
-                        <p className="flex gap-2"><i class="bi bi-twitter"></i>{userData.twitter_username || "Not Available"}</p>
+                        <p className="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                            </svg>{userData.location || "Not Available"}
+                        </p>
+                        <p className="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                            </svg>{userData.twitter_username || "Not Available"}
+                        </p>
                     </div>
-                    <div className="text-center mt-3">
-                        <button type="button" className="bg-blue-600 w-70 py-1 px-4 text-white rounded-lg" onClick={handleCaptureClick}>Download</button>
-                    </div>
+                    {
+                        downloadBtn && (
+                            <div className="text-center mt-3">
+                                <button type="button" className="bg-blue-600 w-70 py-1 px-4 text-white rounded-lg" onClick={handleCaptureClick}>Download</button>
+                            </div>
+                        )
+                    }
                 </div>
             </div>
         </div>
