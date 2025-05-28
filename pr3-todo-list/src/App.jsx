@@ -6,7 +6,6 @@ const App = () => {
     return (
         <React.Fragment>
             <TodoList />
-            <Table />
         </React.Fragment>
     )
 }
