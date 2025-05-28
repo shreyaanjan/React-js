@@ -1,10 +1,19 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Table from "./Table";
 
 const TodoList = () => {
     const [text, setText] = useState("");
     const [tasks, setTasks] = useState([]);
     const ipRef = useRef(null);
+    const [filter, setFilter] = useState("all");
+    const [filterTasks, setFilterTasks] = useState([]);
+
+    const updateStatus = (id) => {
+        let updatedTask = tasks.map((task) => {
+            return task.id === id ? { ...task, isCompleted: true } : task;
+        })
+        setTasks(updatedTask)
+    }
 
     const addTask = () => {
         if (text.trim() === "") return;
@@ -19,6 +28,20 @@ const TodoList = () => {
         ipRef.current.value = "";
         setText("")
     }
+
+    useEffect(() => {
+        let updatedTask = []
+
+        if (filter == "all") {
+            updatedTask = tasks;
+        } else if (filter == "pending") {
+            updatedTask = tasks.filter((item) => !item.isCompleted)
+            console.log(updatedTask);
+        } else {
+            updatedTask = tasks.filter((item) => item.isCompleted)
+        }
+        setFilterTasks(updatedTask)
+    }, [tasks, filter])
 
     return (
         <>
@@ -36,7 +59,21 @@ const TodoList = () => {
                             </button>
                         </div>
                     </form>
-                    <Table tasks={tasks} setTasks={setTasks} />
+                    <div className="flex justify-center">
+                        <div className="inline-flex rounded-md shadow-xs mt-5" role="group">
+                            <button onClick={() => { setFilter("all") }} type="button" className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700">
+                                All
+                            </button>
+                            <button onClick={() => { setFilter("pending") }} type="button" className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700">
+                                Pending
+                            </button>
+                            <button onClick={() => { setFilter("completed") }} type="button" className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700">
+                                Completed
+                            </button>
+                        </div>
+                    </div>
+
+                    <Table tasks={filterTasks} updateStatus={updateStatus} />
                 </div>
             </div>
         </>
