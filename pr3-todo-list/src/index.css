@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f9e0b2;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3e3c4;
 }
 
-.box{
-    background-color: #292120;
+.box {
+  background-color: #292120;
 }
 
 .custom-scroll::-webkit-scrollbar {
@@ -20,6 +20,6 @@ body {
 }
 
 .custom-scroll::-webkit-scrollbar-thumb {
-  background-color: #9ca3af; 
+  background-color: #9ca3af;
   border-radius: 4px;
 }
