@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 const Table = ({ tasks, setTasks, filter }) => {
     const [filterTasks, setFilterTasks] = useState([]);
+
     const completedCount = filterTasks.filter(task => task.isCompleted).length;
     const pendingCount = filterTasks.length - completedCount;
 
@@ -25,18 +26,18 @@ const Table = ({ tasks, setTasks, filter }) => {
                     <tbody>
                         {filterTasks.map((task) => {
                             return <tr key={task.id} className="w-full">
-                                <td className="text-white whitespace-nowrap font-normal ">
-                                    <div className="border flex items-center justify-between p-3 border-white w-full">
+                                <td className="text-black whitespace-nowrap font-normal ">
+                                    <div className="flex items-center rounded-2xl justify-between p-3 border-[#9088d3] w-full border-2">
                                         <div className="flex">
-                                            <span className={task.isCompleted ? 'line-through text-gray-400' : ''}>&#x2022; {task.taskName}</span>
+                                            <span className={task.isCompleted ? 'line-through text-gray-700' : ''}>&#x2022; {task.taskName}</span>
                                         </div>
                                         <div >
                                             {task.isCompleted ? (
-                                                <span className="text-green-400">Completed</span>
+                                                <span className="text-green-700">Completed</span>
                                             ) : (
                                                 <span
                                                     onClick={() => updateStatus(task.id)}
-                                                    className="cursor-pointer text-yellow-300">
+                                                    className="cursor-pointer text-red-700">
                                                     Pending
                                                 </span>
                                             )}
@@ -48,8 +49,8 @@ const Table = ({ tasks, setTasks, filter }) => {
                     </tbody>
                 </table>
                 <div className="flex justify-between">
-                    <div className="px-2 py-3 text-white">Completed: {completedCount}</div>
-                    <div className="px-2 py-3 text-white">Pending: {pendingCount}</div>
+                    <div className="px-2 py-3 text-black">Completed: {completedCount}</div>
+                    <div className="px-2 py-3 text-black">Pending: {pendingCount}</div>
                 </div>
             </div>
         </>
