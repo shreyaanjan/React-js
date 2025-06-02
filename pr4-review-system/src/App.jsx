@@ -1,5 +1,5 @@
 import React from 'react'
-import Reviewcard from './assets/components/Reviewcard'
+import Reviewcard from './components/Reviewcard'
 
 const App = () => {
     return (
