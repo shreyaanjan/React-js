@@ -39,39 +39,43 @@ const Reviewcard = () => {
     }
     console.log(input);
     return (
-        <div className="container">
-            <form ref={formRef} onSubmit={handleSubmit} className="max-w-sm mx-auto mt-5">
+        <div className="min-h-screen flex items-center justify-center bg-gray-100">
+            <form ref={formRef} onSubmit={handleSubmit} className="bg-white/60 backdrop-blur-lg shadow-xl rounded-xl p-6 w-full max-w-md">
+                <h2 className="text-3xl font-bold text-center mb-6">Review Form</h2>
                 <div className="mb-5">
-                    <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 ">Your name</label>
-                    <input type="text" id="name" value={input.name} onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 peer" placeholder="Enter your name" required />
-                    {errors.name && <p className="mt-2 text-sm text-red-600 dark:text-red-500">{errors.name}</p>}
+                    <label htmlFor="name" className="block mb-0.5 text-sm font-medium text-gray-700">Your name</label>
+                    <input type="text" id="name" name="name" value={input.name} onChange={handleChange} className="w-full px-2.5 py-2 text-sm border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-400 focus:outline-none" placeholder="Enter your name" required />
+                    {errors.name && <p className="text-sm text-red-600">{errors.name}</p>}
                 </div>
                 <div className="mb-5">
-                    <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900">Your review</label>
-                    <textarea id="message" value={input.message} onChange={handleChange} rows={4} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter Your Review..." />
-                    {errors.message && <p className="mt-2 text-sm text-red-600 dark:text-red-500">{errors.message}</p>}
+                    <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-700">Your review</label>
+                    <textarea id="message" value={input.message} onChange={handleChange} rows={4} className="w-full px-2.5 py-2 text-sm border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-400 focus:outline-none" placeholder="Enter Your Review..." />
+                    {errors.message && <p className="text-sm text-red-600">{errors.message}</p>}
                 </div>
-                <div className="relative max-w-sm">
-                    <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                        <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <div className="relative mb-5">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg className="w-5 h-5 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                         </svg>
                     </div>
-                    <input id="date" value={input.date} onChange={handleChange} type="date" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Select date" />
-                    {errors.date && <p className="mt-2 text-sm text-red-600 dark:text-red-500">{errors.date}</p>}
+                    <input id="date" value={input.date} onChange={handleChange} type="date" className="pl-10 pr-4 py-2 text-sm w-full border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-400 focus:outline-none" placeholder="Select date" />
+                    {errors.date && <p className="text-sm text-red-600 dark:text-red-500">{errors.date}</p>}
                 </div>
-                <div className="mt-4">
-                    <select name="rating" value={input.rate} onChange={handleChange} id="rating" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-25 p-2.5">
-                        <option value="0">Rating</option>
+                <div className="mb-5">
+                    <label htmlFor="rating" className="block mb-2 text-sm font-medium text-gray-700">
+                        Rating
+                    </label>
+                    <select name="rating" value={input.rate} onChange={handleChange} id="rating" className="w-full px-2.5 py-2 text-sm border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                        <option value="0">Rate Here</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-                    {errors.rating && <p className="mt-2 text-sm text-red-600 dark:text-red-500">{errors.rating}</p>}
+                    {errors.rating && <p className="text-sm text-red-600 dark:text-red-500">{errors.rating}</p>}
                 </div>
-                <button type="submit" className="text-white bg-[linear-gradient(95deg,_rgba(169,132,245,1)_0%,_rgba(65,122,244,1)_100%)] mt-4 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>                
+                <button type="submit" className="w-full py-2 text-white text-sm font-medium rounded-lg bg-gradient-to-r from-purple-400 to-blue-500 hover:from-purple-500 hover:to-blue-600 transition">Submit</button>
             </form>
         </div>
     )
