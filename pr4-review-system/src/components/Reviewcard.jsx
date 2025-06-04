@@ -43,16 +43,17 @@ const Reviewcard = () => {
         if (Object.keys(validateErrors).length === 0) {
             setCard(true);
             setSubmittedData([...submittedData, input]);
-            // setInput({
-            //     name: "", message: "", date: "", rating: "",
-            // });
+            setInput({
+                name: "", message: "", date: "", rating: "",
+            });
         }
     }
     console.log(input);
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="flex flex-col md:flex-row gap-5 w-full max-w-5xl">
-                <form ref={formRef} onSubmit={handleSubmit} className="bg-white/60 backdrop-blur-lg shadow-xl rounded-xl p-6 w-full max-w-md">
+            <div className={`flex w-full max-w-5xl gap-5 flex-col md:flex-row 
+                ${submittedData.length === 0 ? "justify-center items-center" : ""}`}>
+                <form ref={formRef} onSubmit={handleSubmit} className="bg-white/60 backdrop-blur-lg shadow-xl rounded-xl p-6 w-full h-full max-w-md">
                     <h2 className="text-3xl font-bold text-center mb-6">Review Form</h2>
                     <div className="mb-5 pb-2 relative">
                         <label htmlFor="name" className="block mb-0.5 px-1 absolute bg-white left-3 top-[-11px] text-sm font-medium text-gray-700">Name</label>
@@ -96,8 +97,8 @@ const Reviewcard = () => {
                     </div>
                     <button type="submit" className="w-full py-2 text-white text-sm font-medium rounded-lg bg-gradient-to-r from-purple-400 to-blue-500 hover:from-purple-500 hover:to-blue-600 transition">Submit</button>
                 </form>
-                <div>
-                    <div className="flex flex-wrap gap-5 justify-center">
+                <div className="h-[400px] overflow-y-auto pr-2">
+                    <div className=" flex flex-wrap gap-5 justify-center">
                         {submittedData.map((review, index) => (
                             <div key={index} className="bg-gradient-to-br from-[#6C63FF] to-[#8E7EFF]  text-white p-4 rounded-xl shadow-md w-64 h-40">
                                 <div className="flex gap-1 mb-3">
@@ -107,12 +108,11 @@ const Reviewcard = () => {
                                     "{review.message}"
                                 </p>
                                 <div className="text-sm font-semibold">{review.name}</div>
-                                <div className="text-xs opacity-90">{review.date}</div>
+                                <div className="text-xs opacity-90 mt-1">{review.date}</div>
                             </div>
                         ))}
                     </div>
                 </div>
-
             </div>
         </div>
     )
