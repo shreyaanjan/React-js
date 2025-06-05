@@ -2,7 +2,7 @@ const Header = () => {
     return (
         <header className="header-section">
             <div className="container">
-                <div className="d-flex align-items-center justify-content-around">
+                <div className="d-flex align-items-center justify-content-between">
                     <div className="logo">
                         <img src="public/images/logo.png" alt="" />
                     </div>
