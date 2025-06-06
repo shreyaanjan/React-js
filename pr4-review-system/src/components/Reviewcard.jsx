@@ -115,24 +115,22 @@ const Reviewcard = () => {
                 </form>
                 {submittedData.length > 0 && (
                     <div className="h-[425px] w-full overflow-y-auto scrollbar-width pr-2">
-                        <div className="gap-4">
-                            {submittedData.map((review, index) => (
-                                <div key={index} className="my-4 bg-gradient-to-br from-[#6C63FF] to-[#8E7EFF] text-white w-full p-3 rounded-xl shadow-md">
-                                    <div className="flex gap-1 mb-3">
-                                        {"⭐".repeat(Number(review.rating))}
-                                    </div>
-                                    <p className="italic text-sm leading-relaxed  break-words mb-4">
-                                        '{review.message}'
-                                    </p>
-                                    <div className="text-sm font-semibold">{review.name}</div>
-                                    <div className="text-xs opacity-90 mt-1 mb-2">{review.date}</div>
-                                    <div className='flex gap-4'>
-                                        <button onClick={() => { handleEdit(index) }} className="rounded-xl"><i className="bi bi-pencil-square"></i></button>
-                                        <button onClick={() => { handleDelete(index) }} className="rounded-xl"><i className="bi bi-trash"></i></button>
-                                    </div>
+                        {submittedData.map((review, index) => (
+                            <div key={index} className="my-4 bg-gradient-to-br from-[#6C63FF] to-[#8E7EFF] text-white w-full p-3 rounded-xl shadow-md">
+                                <div className="flex gap-1 mb-3">
+                                    {"⭐".repeat(Number(review.rating))}
                                 </div>
-                            ))}
-                        </div>
+                                <p className="italic text-sm break-words mb-4">
+                                    '{review.message}'
+                                </p>
+                                <div className="text-sm font-semibold">{review.name}</div>
+                                <div className="text-xs opacity-90 mt-1 mb-2">{review.date}</div>
+                                <div className='flex gap-4'>
+                                    <button onClick={() => { handleEdit(index) }} className="rounded-xl"><i className="bi bi-pencil-square"></i></button>
+                                    <button onClick={() => { handleDelete(index) }} className="rounded-xl"><i className="bi bi-trash"></i></button>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 )}
             </div>
