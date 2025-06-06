@@ -1,15 +1,14 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 
 const Reviewcard = () => {
     const [input, setInput] = useState({
         name: "", message: "", date: "", rating: "",
     })
 
-    const formRef = useRef(null);
-
     const [errors, setErrors] = useState({});
 
-    const [card, setCard] = useState(false);
+    const [editIndex, setEditIndex] = useState(null);
+    const [isUpdate, setIsUpdate] = useState(false)
 
     const [submittedData, setSubmittedData] = useState([]);
 
@@ -41,23 +40,49 @@ const Reviewcard = () => {
 
         setErrors(validateErrors);
         if (Object.keys(validateErrors).length === 0) {
-            setCard(true);
-            setSubmittedData([...submittedData, input]);
+            if (isUpdate) {
+                const updatedArr = [...submittedData];
+                updatedArr[editIndex] = input;
+                setSubmittedData(updatedArr);
+                setIsUpdate(false);
+                setEditIndex(null);
+            } else {
+                setSubmittedData([...submittedData, input]);
+            }
+
             setInput({
                 name: "", message: "", date: "", rating: "",
             });
         }
+
     }
+
+    const handleEdit = (idx) => {
+        const editObj = submittedData[idx];
+        setInput({
+            name: editObj.name, message: editObj.message, date: editObj.date, rating: editObj.rating,
+        });
+        setEditIndex(idx);
+        setIsUpdate(true)
+    }
+
+    const handleDelete = (idx) => {
+        const afterDelete = submittedData.filter((data, index) => {
+            return idx != index;
+        });
+        setSubmittedData(afterDelete);
+    }
+
     console.log(input);
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className={`flex w-full max-w-5xl gap-14 flex-col md:flex-row 
+            <div className={`flex w-full max-w-3xl gap-14 flex-col md:flex-row
                 ${submittedData.length === 0 ? "justify-center items-center" : ""}`}>
-                <form ref={formRef} onSubmit={handleSubmit} className="bg-white/60 backdrop-blur-lg shadow-xl rounded-xl p-6 w-full h-full max-w-md">
+                <form onSubmit={handleSubmit} className="bg-white/60 backdrop-blur-lg shadow-xl rounded-xl p-6 w-full h-full max-w-md">
                     <h2 className="text-2xl font-bold text-center mb-6">Review Form</h2>
                     <div className="mb-5 pb-2 relative">
                         <label htmlFor="name" className="block mb-2 px-1 absolute bg-white left-3 top-[-11px] text-sm font-medium text-gray-700">Name</label>
-                        <input type="text" id="name" name="name" value={input.name} onChange={handleChange} className="w-full px-2.5 py-2.5 text-sm border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-400 focus:outline-none" placeholder="Enter your name" required />
+                        <input type="text" id="name" name="name" value={input.name} onChange={handleChange} className="w-full px-2.5 py-2.5 text-sm border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-400 focus:outline-none" placeholder="Enter your name" />
                         {errors.name && <p className="text-sm text-red-600">{errors.name}</p>}
                     </div>
                     <div className="mb-5 relative">
@@ -88,26 +113,28 @@ const Reviewcard = () => {
                     </div>
                     <button type="submit" className="w-full py-2 text-white text-sm font-medium rounded-lg bg-gradient-to-r from-purple-400 to-blue-500 hover:from-purple-500 hover:to-blue-600 transition">Submit</button>
                 </form>
-                <div className="h-[425px] overflow-y-auto pr-2">
-                    <div className="gap-4">
-                        {submittedData.map((review, index) => (
-                            <div key={index} className="my-4 bg-gradient-to-br from-[#6C63FF] to-[#8E7EFF] text-white p-4 rounded-xl shadow-md  h-50">
-                                <div className="flex gap-1 mb-3">
-                                    {"⭐".repeat(Number(review.rating))}
+                {submittedData.length > 0 && (
+                    <div className="h-[425px] w-full overflow-y-auto scrollbar-width pr-2">
+                        <div className="gap-4">
+                            {submittedData.map((review, index) => (
+                                <div key={index} className="my-4 bg-gradient-to-br from-[#6C63FF] to-[#8E7EFF] text-white w-full p-3 rounded-xl shadow-md">
+                                    <div className="flex gap-1 mb-3">
+                                        {"⭐".repeat(Number(review.rating))}
+                                    </div>
+                                    <p className="italic text-sm leading-relaxed  break-words mb-4">
+                                        '{review.message}'
+                                    </p>
+                                    <div className="text-sm font-semibold">{review.name}</div>
+                                    <div className="text-xs opacity-90 mt-1 mb-2">{review.date}</div>
+                                    <div className='flex gap-4'>
+                                        <button onClick={() => { handleEdit(index) }} className="rounded-xl"><i className="bi bi-pencil-square"></i></button>
+                                        <button onClick={() => { handleDelete(index) }} className="rounded-xl"><i className="bi bi-trash"></i></button>
+                                    </div>
                                 </div>
-                                <p className="italic text-sm leading-relaxed mb-4">
-                                    "{review.message}"
-                                </p>
-                                <div className="text-sm font-semibold">{review.name}</div>
-                                <div className="text-xs opacity-90 mt-1 mb-2">{review.date}</div>
-                                <div className='flex gap-4'>
-                                    <button className="w-32 bg-emerald-400 hover:bg-emerald-500 p-1 rounded-xl">Edit</button>
-                                    <button className="w-32 bg-red-400 hover:bg-red-500 p-1 rounded-xl">Delete</button>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
-                </div>
+                )}
             </div>
         </div>
     )
