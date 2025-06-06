@@ -51,7 +51,7 @@ const Reviewcard = () => {
     console.log(input);
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className={`flex w-full max-w-5xl gap-5 flex-col md:flex-row 
+            <div className={`flex w-full max-w-5xl gap-14 flex-col md:flex-row 
                 ${submittedData.length === 0 ? "justify-center items-center" : ""}`}>
                 <form ref={formRef} onSubmit={handleSubmit} className="bg-white/60 backdrop-blur-lg shadow-xl rounded-xl p-6 w-full h-full max-w-md">
                     <h2 className="text-2xl font-bold text-center mb-6">Review Form</h2>
@@ -88,10 +88,10 @@ const Reviewcard = () => {
                     </div>
                     <button type="submit" className="w-full py-2 text-white text-sm font-medium rounded-lg bg-gradient-to-r from-purple-400 to-blue-500 hover:from-purple-500 hover:to-blue-600 transition">Submit</button>
                 </form>
-                <div className="h-[400px] overflow-y-auto pr-2">
-                    <div className=" flex flex-wrap gap-5 justify-center">
+                <div className="h-[425px] overflow-y-auto pr-2">
+                    <div className="gap-4">
                         {submittedData.map((review, index) => (
-                            <div key={index} className="bg-gradient-to-br from-[#6C63FF] to-[#8E7EFF]  text-white p-4 rounded-xl shadow-md w-64 h-40">
+                            <div key={index} className="my-4 bg-gradient-to-br from-[#6C63FF] to-[#8E7EFF] text-white p-4 rounded-xl shadow-md  h-50">
                                 <div className="flex gap-1 mb-3">
                                     {"⭐".repeat(Number(review.rating))}
                                 </div>
@@ -99,7 +99,11 @@ const Reviewcard = () => {
                                     "{review.message}"
                                 </p>
                                 <div className="text-sm font-semibold">{review.name}</div>
-                                <div className="text-xs opacity-90 mt-1">{review.date}</div>
+                                <div className="text-xs opacity-90 mt-1 mb-2">{review.date}</div>
+                                <div className='flex gap-4'>
+                                    <button className="w-32 bg-emerald-400 hover:bg-emerald-500 p-1 rounded-xl">Edit</button>
+                                    <button className="w-32 bg-red-400 hover:bg-red-500 p-1 rounded-xl">Delete</button>
+                                </div>
                             </div>
                         ))}
                     </div>
