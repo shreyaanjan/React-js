@@ -9,6 +9,7 @@
 
 .header-section {
     padding: 25px 0;
+    background-color: #e1ecf1;
 }
 
 .hero-section {
@@ -19,7 +20,7 @@
 .about-section,
 .company-section,
 .features-section {
-    padding: 100px;
+    padding: 100px 0;
 }
 
 .header-section ul li {
@@ -219,5 +220,47 @@
 .title p{
     color: #666666;
     font-family: 'Open Sans', sans-serif;
-    
+    padding: 0 20%;
+    line-height: 1.8;
+}
+
+.lines{
+    position: relative;
+    display: inline-block;
+}
+.lines::before{
+    background: #4ac4f3;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    margin-left: -5px;
+    position: absolute;
+    width: 50px;
+}
+.lines::after{
+    background: #232323;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    margin-left: -40px;
+    position: absolute;
+    width: 25px;
+}
+.icon{
+    width: 80px;
+    height: 80px;
+    background-color: #cde1e9;
+    border-radius: 50%;
+    font-size: 35px;
+    display: flex;
+}
+.feature-info h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+.feature-info p{
+    color: #666666;
+    font-family: 'Open Sans', sans-serif;
 }
