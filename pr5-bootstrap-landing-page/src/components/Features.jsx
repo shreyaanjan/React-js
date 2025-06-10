@@ -39,7 +39,7 @@ const Features = () => {
                 <Title title={title} desc={desc} />
             </div>
             <div className="container">
-                <div className="row py-4">
+                <div className="row py-5">
                     <div className="col-5">
                         <Image img={image} />
                     </div>

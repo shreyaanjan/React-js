@@ -4,6 +4,10 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Companies from './components/Companies'
 import Features from './components/Features'
+import Pricing from './components/Pricing'
+import Team from './components/Team'
+import Testimonial from './components/Testimonial'
+import Contact from './Contact'
 
 const App = () => {
     return (
@@ -13,6 +17,10 @@ const App = () => {
             <About />
             <Companies />
             <Features />
+            <Pricing />
+            <Team />
+            <Testimonial />
+            <Contact />
         </>
     )
 }

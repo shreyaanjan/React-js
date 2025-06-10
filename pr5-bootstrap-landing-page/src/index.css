@@ -19,7 +19,11 @@
 
 .about-section,
 .company-section,
-.features-section {
+.features-section,
+.pricing-section,
+.team-section,
+.testimony-section,
+.contact-section {
     padding: 100px 0;
 }
 
@@ -211,24 +215,25 @@
     color: #4ac4f3 !important;
 }
 
-.title h2{
+.title h2 {
     font-size: 36px;
     color: #232323;
     font-weight: 700;
 }
 
-.title p{
+.title p {
     color: #666666;
     font-family: 'Open Sans', sans-serif;
     padding: 0 20%;
     line-height: 1.8;
 }
 
-.lines{
+.lines {
     position: relative;
     display: inline-block;
 }
-.lines::before{
+
+.lines::before {
     background: #4ac4f3;
     bottom: 0;
     content: "";
@@ -238,7 +243,8 @@
     position: absolute;
     width: 50px;
 }
-.lines::after{
+
+.lines::after {
     background: #232323;
     bottom: 0;
     content: "";
@@ -248,7 +254,8 @@
     position: absolute;
     width: 25px;
 }
-.icon{
+
+.icon {
     width: 80px;
     height: 80px;
     background-color: #cde1e9;
@@ -256,11 +263,120 @@
     font-size: 35px;
     display: flex;
 }
+
 .feature-info h4 {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
 }
-.feature-info p{
+
+.feature-info p {
     color: #666666;
     font-family: 'Open Sans', sans-serif;
+}
+
+.pricing-item {
+    background-color: #ffffff;
+    box-shadow: 0px 15px 60px -10px rgb(109 117 143 / 33%);
+    /* border-radius: 10px; */
+}
+
+.pricing-section {
+    background-color: #F7F7F7;
+}
+
+.pricing-header {
+    background-color: #1f2b38;
+    padding: 40px 30px;
+}
+
+.team-info {
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0px 15px 30px -10px rgb(109 117 143 / 33%);
+    padding: 20px;
+    text-align: center;
+    width: 90%;
+    top: -30px;
+    left: 5%;
+    border-radius: 10px;
+}
+
+.team-info h4 {
+    color: #232323;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+}
+
+.team-info p {
+    color: #4ac4f3;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.social {
+    left: 0;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    transition: all 0.35s ease-in-out;
+    width: 100%;
+}
+
+.team-item:hover .social {
+    bottom: 30px;
+    cursor: pointer;
+}
+
+.team-item:hover .image img {
+    opacity: .6;
+}
+
+.social ul li {
+    border-radius: 50%;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    text-align: center;
+    width: 40px;
+    color: white;
+}
+
+.fb {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #00b6f1;
+}
+
+.pinterest {
+    background-color: #bd081c;
+}
+
+.insta {
+    background-color: #cd486b;
+}
+
+.testimony-section {
+    background-color: #F7F7F7;
+}
+
+.address h4 {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+}
+
+.contact-icon{
+    color: #4ac4f3;
 }
