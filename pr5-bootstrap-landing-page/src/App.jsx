@@ -7,7 +7,7 @@ import Features from './components/Features'
 import Pricing from './components/Pricing'
 import Team from './components/Team'
 import Testimonial from './components/Testimonial'
-import Contact from './Contact'
+import Contact from './components/Contact'
 
 const App = () => {
     return (
