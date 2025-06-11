@@ -1,10 +1,13 @@
+import Image from "./Image"
+
 const Header = () => {
+    let img = "/public/images/logo.png"
     return (
         <header className="header-section">
             <div className="container">
                 <div className="d-flex align-items-center justify-content-between">
                     <div className="logo">
-                        <img src="public/images/logo.png" alt="" />
+                        <Image img={img} />
                     </div>
                     <ul className="d-flex align-items-center gap-4 m-0">
                         <li className="text-black fw-semibold">Home</li>

@@ -24,7 +24,8 @@
 .team-section,
 .testimony-section,
 .contact-section,
-.faq-section, .footer-section {
+.faq-section,
+.footer-section {
     padding: 100px 0;
 }
 
@@ -434,4 +435,34 @@
 .accordion-item {
     margin-block: 20px;
     border-radius: 4px;
+}
+
+.footer-left p {
+    color: #666666;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
+}
+
+.footer-link h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #232323;
+    font-weight: 700;
+}
+
+.contact-widget {
+    background: #e8f1f5;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.icon{
+    background: #ffffff;
+    border-radius: 50%;
+    color: #4ac4f3;
+    font-size: 18px;
+    height: 50px;
+    line-height: 47px;
+    text-align: center;
+    width: 50px;
+    border: 1px solid;
 }
