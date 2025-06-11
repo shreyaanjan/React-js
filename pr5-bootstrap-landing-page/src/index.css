@@ -23,7 +23,8 @@
 .pricing-section,
 .team-section,
 .testimony-section,
-.contact-section {
+.contact-section,
+.faq-section, .footer-section {
     padding: 100px 0;
 }
 
@@ -219,6 +220,7 @@
     font-size: 36px;
     color: #232323;
     font-weight: 700;
+    font-family: "Montserrat", sans-serif;
 }
 
 .title p {
@@ -377,9 +379,59 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.contact-icon{
+.contact-icon {
     color: #4ac4f3;
 }
-.contact-info{
+
+.contact-info {
     color: #666666;
+}
+
+.contact-form h2 {
+    font-size: 36px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.contact-form textarea {
+    height: 160px;
+}
+
+.social-2 ul li {
+    border-radius: 50%;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    text-align: center;
+    width: 40px;
+    color: white;
+}
+
+.faq-section {
+    background-color: #F7F7F7;
+}
+
+.accordion-header button {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #232323 !important;
+    padding: 23px 30px;
+    padding-right: 60px;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 700;
+}
+
+.accordion-body {
+    padding: 0px 30px 16px !important;
+    color: #666666 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    line-height: 1.8;
+}
+
+.accordion-item {
+    margin-block: 20px;
+    border-radius: 4px;
 }
