@@ -16,7 +16,7 @@ const PricingCard = ({ iconArr }) => {
                             </h2>
                         </li>
                         {features.map((item)=>{
-                            return<li>{item.validation ? <TiTickOutline />: <IoClose />}{item.label}</li>
+                            return<li>{item.validation ? <TiTickOutline /> : <IoClose />}{item.label}</li>
                         })}  
                     </ul>
             </div>
