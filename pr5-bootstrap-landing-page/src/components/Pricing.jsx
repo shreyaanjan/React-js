@@ -38,8 +38,7 @@ const Pricing = () => {
                 {label: "8 Database",validation: true},
                 {label: "Documentation",validation: true},
             ]
-        },
-       
+        },   
     ]
     let title = "Our Packages";
     let desc = "Learning day desirous informed expenses material returned six the.She enabled invited exposed him another.Reasonably conviction solicitude me mr at discretion"
@@ -50,8 +49,8 @@ const Pricing = () => {
             </div>
             <div className="container">
                 <div className="row">
-                    {plan.map((obj)=>{
-                        return <PricingCard iconArr={obj.iconArr} />
+                    {plan.map((obj, idx)=>{
+                        return <PricingCard key={idx} iconArr={obj.iconArr} />
                     })}
                 </div>
             </div>

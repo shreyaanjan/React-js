@@ -1,5 +1,7 @@
 import Image from "./Image"
 import { FaHome } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";;
+import { FaPhoneAlt } from "react-icons/fa";
 const Footer = () => {
     let img = "/public/images/logo.png"
     return (
@@ -42,10 +44,32 @@ const Footer = () => {
                     <div className="col-4">
                         <div className="contact-widget">
                             <div className="address">
-                                <ul>
-                                    <li>
-                                        <div className="icon">
+                                <ul className="p-0 m-0">
+                                    <li className="d-flex align-items-start mb-4">
+                                        <div className="icon-2 d-flex align-items-center justify-content-center">
                                             <FaHome />
+                                        </div>
+                                        <div className="info ms-3">
+                                            <h5 className="text-uppercase m-0 mb-1">Website:</h5>
+                                            <span>www.validtheme.com</span>
+                                        </div>
+                                    </li>
+                                    <li className="d-flex align-items-start mb-4">
+                                        <div className="icon-2 d-flex align-items-center justify-content-center">
+                                            <IoMdMail />
+                                        </div>
+                                        <div className="info ms-3">
+                                            <h5 className="text-uppercase m-0 mb-1">Email:</h5>
+                                            <span>support@validtheme.com</span>
+                                        </div>
+                                    </li>
+                                    <li className="d-flex align-items-start mb-3">
+                                        <div className="icon-2 d-flex align-items-center justify-content-center">
+                                            <FaPhoneAlt />
+                                        </div>
+                                        <div className="info ms-3">
+                                            <h5 className="text-uppercase m-0 mb-1">Phone:</h5>
+                                            <span>+44-20-7328-4499</span>
                                         </div>
                                     </li>
                                 </ul>
