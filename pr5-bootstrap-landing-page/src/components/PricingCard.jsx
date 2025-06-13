@@ -18,7 +18,7 @@ const PricingCard = ({ iconArr }) => {
                         return <li key={idx}>{item.validation ? <TiTick className="right" /> : <IoClose className="close" />}{item.label}</li>
                     })}
                     <li className="footer p-5">
-                        <button className="rounded-pill price-btn text-capitalize">buy this plan</button>
+                        <button className="button rounded-pill text-capitalize">buy this plan</button>
                     </li>
                 </ul>
             </div>

@@ -61,7 +61,7 @@ const Contact = () => {
                                     <textarea name="comments" className="form-control" id="comments" placeholder="Tell Us About Project*"></textarea>
                                 </div>
                                 <div>
-                                    <button className="rounded head-btn text-white text-capitalize d-flex align-items-center gap-2">send message <FaPaperPlane /></button>
+                                    <button className="rounded-pill head-btn text-white text-capitalize">send message <FaPaperPlane /></button>
                                 </div>
                             </form>
                         </div>

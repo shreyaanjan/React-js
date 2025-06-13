@@ -301,14 +301,16 @@
     font-size: 40px;
 }
 
-.pricing-header sup{
+.pricing-header sup {
     font-size: 24px;
     font-weight: 700;
     margin-right: 5px;
 }
+
 sup {
     top: -.5em;
 }
+
 .pricing-header sub {
     font-size: 17px;
     font-weight: 400 !important;
@@ -319,18 +321,20 @@ sub {
     bottom: -.25em;
 }
 
-.pricing-item li{
+.pricing-item li {
     line-height: 40px;
     font-family: 'Montserrat', sans-serif;
     color: #666666;
 }
 
-.right{
+.right {
     color: #4ac4f3;
 }
-.close{
+
+.close {
     color: #e22626;
 }
+
 .team-info {
     position: relative;
     background-color: #ffffff;
@@ -342,31 +346,23 @@ sub {
     left: 5%;
     border-radius: 10px;
 }
-
-.price-btn{
-    border: 2px solid #1f2b38 !important;
-    color: #232323 !important;
-    background: transparent;
-    padding: 10px 60px !important;
-    position: relative;
+.button {
+  border: 2px solid #1f2b38;
+  color: #232323;
+  padding: 5px 20px;
+  background: linear-gradient(to right, #4ac4f3 50%, white 50%);;
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+  font-weight: 700;
 }
 
-.price-btn::after{
-    position: absolute;
-    content: "";
-    background-color: #4ac4f3;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transition: all 0.25s ease-in-out;
-    z-index: -1;
-    right: inherit;
-    bottom: inherit;
+.button:hover {
+  background-position: left bottom;
+  color: white;
+  border: none;
 }
 
-.price-btn:hover::after{
-    width: 100%;
-}
 
 .team-info h4 {
     color: #232323;
@@ -511,6 +507,10 @@ sub {
     font-family: 'Montserrat', sans-serif;
     color: #232323;
     font-weight: 700;
+}
+.footer-link ul li:hover{
+    color: #4ac4f3;
+    cursor: pointer;
 }
 
 .contact-widget {
