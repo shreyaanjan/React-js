@@ -5,7 +5,7 @@ const Pricing = () => {
     let plan = [
         {
             iconArr: [
-                {catagory:"trial version", price: "00.00"},
+                {category:"Trial Version", price: "00.00"},
                 {label: "Demo File",validation: true},
                 {label: "Update",validation: false},
                 {label: "File Compressed",validation: true},
@@ -17,7 +17,7 @@ const Pricing = () => {
         },
         {
             iconArr: [
-                {catagory:"Regular", price: "29.00"},
+                {category:"Regular", price: "29.00"},
                 {label: "Demo File",validation: true},
                 {label: "Update",validation: true},
                 {label: "File Compressed",validation: true},
@@ -29,7 +29,7 @@ const Pricing = () => {
         },
         {
             iconArr: [
-                {catagory:"Extended", price: "59.00"},
+                {category:"Extended", price: "59.00"},
                 {label: "Demo File",validation: true},
                 {label: "Update",validation: true},
                 {label: "File Compressed",validation: false},

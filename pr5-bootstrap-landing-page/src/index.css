@@ -280,7 +280,6 @@
 .pricing-item {
     background-color: #ffffff;
     box-shadow: 0px 15px 60px -10px rgb(109 117 143 / 33%);
-    /* border-radius: 10px; */
 }
 
 .pricing-section {
@@ -292,6 +291,46 @@
     padding: 40px 30px;
 }
 
+.pricing-header h4 {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.pricing-header h2 {
+    font-size: 40px;
+}
+
+.pricing-header sup{
+    font-size: 24px;
+    font-weight: 700;
+    margin-right: 5px;
+}
+sup {
+    top: -.5em;
+}
+.pricing-header sub {
+    font-size: 17px;
+    font-weight: 400 !important;
+    margin-inline-start: 5px;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+.pricing-item li{
+    line-height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: #666666;
+}
+
+.right{
+    color: #4ac4f3;
+}
+.close{
+    color: #e22626;
+}
 .team-info {
     position: relative;
     background-color: #ffffff;
@@ -302,6 +341,31 @@
     top: -30px;
     left: 5%;
     border-radius: 10px;
+}
+
+.price-btn{
+    border: 2px solid #1f2b38 !important;
+    color: #232323 !important;
+    background: transparent;
+    padding: 10px 60px !important;
+    position: relative;
+}
+
+.price-btn::after{
+    position: absolute;
+    content: "";
+    background-color: #4ac4f3;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.25s ease-in-out;
+    z-index: -1;
+    right: inherit;
+    bottom: inherit;
+}
+
+.price-btn:hover::after{
+    width: 100%;
 }
 
 .team-info h4 {
@@ -455,7 +519,7 @@
     border-radius: 10px;
 }
 
-.icon-2{
+.icon-2 {
     width: 50px;
     height: 50px;
     background-color: #ffffff;
@@ -465,14 +529,14 @@
     border: 1px solid #4ac4f3;
 }
 
-.info h5{
+.info h5 {
     font-size: 16px;
     color: #1f2b38;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
 }
 
-.info span{
+.info span {
     color: #666666;
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
