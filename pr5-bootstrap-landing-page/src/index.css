@@ -541,3 +541,22 @@ sub {
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
 }
+.testimony-section .swiper-pagination-bullet {
+  background-color: #00bcd4; /* light blue bullets */
+}
+.testimony-txt{
+    font-size: 26px;
+    color: #666666;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
+}
+.testimony-name{
+    font-family: 'Montserrat', sans-serif;
+    color: #232323;
+}
+.testimony-role{
+    color: #4ac4f3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
