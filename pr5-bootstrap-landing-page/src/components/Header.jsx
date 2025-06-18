@@ -26,7 +26,7 @@ const Header = () => {
                         <li className="text-black fw-semibold">Pages</li>
                         <li className="text-black fw-semibold">Contact</li>
                     </ul>
-                    <div className="d-none d-md-flex">
+                    <div className="d-none d-lg-flex">
                         <button className="rounded-pill head-btn text-white text-capitalize">Try it free</button>
                     </div>
                     <Button variant="primary" className="d-flex d-md-none" onClick={handleShow}>
