@@ -26,7 +26,7 @@ const App = () => {
                 <Route path="/contact" element={<Contact/>} />
                 <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn}/>} />
                 <Route path="/employees" element={<Employees/>} />
-                <Route path="/addemployee" element={<AddEmployee/>} />
+                <Route path="/add-employee" element={<AddEmployee/>} />
             </Routes>
             <ToastContainer />
         </BrowserRouter>

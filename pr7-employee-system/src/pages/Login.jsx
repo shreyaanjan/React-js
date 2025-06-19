@@ -16,6 +16,7 @@ const Login = ({ setIsLoggedIn }) => {
         e.preventDefault();
 
         if (input.email == "admin@gmail.com" && input.password == "admin@123") {
+            setIsLoggedIn(true);
             localStorage.setItem("isLoggedIn", JSON.stringify(true))
             toast.success("Admin Logged In Successfully !");
             navigate("/employees")

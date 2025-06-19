@@ -1,28 +1,55 @@
-import React from 'react'
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AddEmployee = () => {
+    const navigate = useNavigate();
+
+    const [input, setInput] = useState({
+        name: "", salary: "", department: "",
+    })
+
+    const handleChange = (e) => {
+        setInput({ ...input, [e.target.id]: e.target.value })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const employeeDetail = { id: Date.now(), ...input };
+        const employees = JSON.parse(localStorage.getItem("employees")) || [];
+        employees.push(employeeDetail);
+
+        localStorage.setItem("employees", JSON.stringify(employees));
+        setInput({name: "", salary: "", department: ""})
+        navigate("/employees")
+    }
+
     return (
         <div className="container mx-auto">
-            <form>
-                <div className="grid gap-6 mb-6 md:grid-cols-2">
+            <form onSubmit={handleSubmit}>
+                <div className="grid gap-6 mb-6 md:grid-cols-2 items-center">
                     <div>
-                        <label htmlFor="first_name" className="block mb-2 text-sm font-medium text-gray-900">First name</label>
-                        <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="John" required />
+                        <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900">Employee Name</label>
+                        <input onChange={handleChange} value={input.name} type="text" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="John" required />
                     </div>
                     <div>
-                        <label htmlFor="last_name" className="block mb-2 text-sm font-medium text-gray-900">Last name</label>
-                        <input type="text" id="last_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Doe" required />
+                        <label htmlFor="salary" className="block mb-2 text-sm font-medium text-gray-900">Salary</label>
+                        <input onChange={handleChange} value={input.salary} type="number" id="salary" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="₹5000" required />
                     </div>
                     <div>
-                        <label htmlFor="company" className="block mb-2 text-sm font-medium text-gray-900">Company</label>
-                        <input type="text" id="company" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Flowbite" required />
+                        <label htmlFor="department" className="block mb-2 text-sm font-medium text-gray-900">Department</label>
+                        <select onChange={handleChange} value={input.department} id="department" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                            <option value="">Choose a Department</option>
+                            <option value="1">Designing</option>
+                            <option value="2">Development</option>
+                            <option value="3">Finance</option>
+                            <option value="4">Sales And Marketing</option>
+                        </select>
                     </div>
                     <div>
-                        <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900">Phone number</label>
-                        <input type="tel" id="phone" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
+                        <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center mt-5">Submit</button>
                     </div>
                 </div>
-                <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
             </form>
         </div>
     )

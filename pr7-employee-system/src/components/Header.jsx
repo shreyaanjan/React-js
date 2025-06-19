@@ -32,7 +32,7 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
                             <li>
                                 <Link to={"/contact"} className={`${pathname == "/contact" ? "text-teal-700" : "text-gray-900"}`}>Contact</Link>
                             </li>
-                            {isLoggedIn && (<Link to={"/employees"} className={`${pathname == "/employees" ? "text-teal-700" : "text-gray-900"}`}>Employees</Link>)}
+                            {isLoggedIn && (<Link to={"/employees"} className={`${pathname == "/employees" || pathname == "/add-employee" ? "text-teal-700" : "text-gray-900"}`}>Employees</Link>)}
                         </ul>
                     </div>
                     {
