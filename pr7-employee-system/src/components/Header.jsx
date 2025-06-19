@@ -1,8 +1,10 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { toast } from "react-toastify"
 
 const Header = ({ isLoggedIn, setIsLoggedIn }) => {
     const navigate = useNavigate();
+    
+    const { pathname } = useLocation();
 
     const handleClick = () => {
         setIsLoggedIn(false);
@@ -22,22 +24,22 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
                     <div className="hidden w-full md:block md:w-auto" id="navbar-default">
                         <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
                             <li>
-                                <Link to={"/"} className="block py-2 px-3 text-white bg-teal-700 rounded-sm md:bg-transparent md:text-teal-700 md:p-0" aria-current="page">Home</Link>
+                                <Link to={"/"} className={`${pathname == "/" ? "text-teal-700" : "text-gray-900"}`}>Home</Link>
                             </li>
                             <li>
-                                <Link to={"/about"} className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0">About</Link>
+                                <Link to={"/about"} className={`${pathname == "/about" ? "text-teal-700" : "text-gray-900"}`}>About</Link>
                             </li>
                             <li>
-                                <Link to={"/contact"} className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0">Contact</Link>
+                                <Link to={"/contact"} className={`${pathname == "/contact" ? "text-teal-700" : "text-gray-900"}`}>Contact</Link>
                             </li>
-                            {isLoggedIn && (<Link to={"/employees"} className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0">Employees</Link>)}
+                            {isLoggedIn && (<Link to={"/employees"} className={`${pathname == "/employees" ? "text-teal-700" : "text-gray-900"}`}>Employees</Link>)}
                         </ul>
                     </div>
                     {
-                        isLoggedIn ? (<button onClick={handleClick} type="button" className="text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Logout</button>
-                        ) : (<button onClick={() => {
-                            navigate("/login")
-                        }} type="button" className="text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Login</button>)
+                        isLoggedIn ? <button onClick={handleClick} type="button" className="text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Logout</button>
+                            : <button onClick={() => {
+                                navigate("/login")
+                            }} type="button" className="text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Login</button>
                     }
                 </div>
             </nav>

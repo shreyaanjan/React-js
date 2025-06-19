@@ -5,11 +5,17 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Login from "./pages/Login"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Employees from './pages/Employees';
+import AddEmployee from './pages/AddEmployee';
 
 const App = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        let loginStatus = JSON.parse(localStorage.getItem("isLoggedIn"))
+        setIsLoggedIn(loginStatus)
+    },[])
 
     return (
         <BrowserRouter>
@@ -18,8 +24,9 @@ const App = () => {
                 <Route path="/" element={<Home/>} />
                 <Route path="/about" element={<About/>} />
                 <Route path="/contact" element={<Contact/>} />
-                <Route path="/login" element={<Login/>} />
+                <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn}/>} />
                 <Route path="/employees" element={<Employees/>} />
+                <Route path="/addemployee" element={<AddEmployee/>} />
             </Routes>
             <ToastContainer />
         </BrowserRouter>
