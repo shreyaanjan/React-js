@@ -21,7 +21,8 @@ const AddEmployee = () => {
 
         localStorage.setItem("employees", JSON.stringify(employees));
         setInput({name: "", salary: "", department: ""})
-        navigate("/employees")
+        navigate("/employees");
+        console.log(employees);
     }
 
     return (
