@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom"
 
-const EmployeeTable = ({ employees }) => {
+const EmployeeTable = ({ employees, employeeDelete }) => {
+
+    const handleDelete = (id) =>{
+        employeeDelete(id);
+    }
     return (
         <div className="relative overflow-x-auto mt-5">
             <table className="w-full text-sm text-left  text-gray-500">
@@ -26,14 +30,14 @@ const EmployeeTable = ({ employees }) => {
                 <tbody>
                     {
                         employees.map((emp, idx) => {
-                            return <tr key={idx} className="border-b border-l border-r border-gray-300">
+                            return <tr key={emp.id} className="border-b border-l border-r border-gray-300">
                                 <td scope="row" className="px-6 py-4 text-gray-900 whitespace-nowrap ">{idx + 1}</td>
                                 <td className="px-6 py-4 text-gray-900">{emp.name}</td>
                                 <td className="px-6 py-4 text-gray-900">{emp.salary}</td>
                                 <td className="px-6 py-4 text-gray-900">{emp.department == 1 ? "Designing" : emp.department == 2 ? "Development" : emp.department == 3 ? "Finance" : "Sales and Marketing"}</td>
                                 <td className="px-6 py-4 flex gap-5">
-                                    <Link className="font-medium text-green-600">Edit</Link>
-                                    <button className="font-medium text-red-600">Delete</button>
+                                    <Link  className="font-medium text-green-600">Edit</Link>
+                                    <button onClick={()=> handleDelete(emp.id)} className="font-medium text-red-600">Delete</button>
                                 </td>
                             </tr>
                         })

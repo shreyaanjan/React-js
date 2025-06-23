@@ -66,74 +66,76 @@ const Form = ({ addUsers, editUser, updateUser }) => {
     }
 
     return (
-        <div className="container mx-auto my-4 md:px-0 px-10">
-            <form onSubmit={handleSubmit}>
-                <div className="grid gap-6 mb-6 md:grid-cols-2">
-                    <div>
-                        <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900">Name</label>
-                        <input type="text" onChange={handleChange} value={input.name} id="name" className="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 border-2" placeholder="John" />
-                        {errors.name && (<p className="text-red-500 text-sm mt-1">{errors.name}</p>)}
+        <div className="flex min-h-screen">
+            <div className="hidden lg:flex w-1/2 bg-white justify-center items-center">
+                <img src="https://brandio.io/envato/iofrm/html/images/graphic10.svg" alt="Team work illustration" className="max-w-[80%]" />
+            </div>
+            <div className="w-full lg:w-1/2 bg-[#d3936b] flex items-center justify-center">
+                <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 w-full max-w-lg">
+                    <div className="text-center mb-6">
+                        <h1 className="text-2xl font-bold text-gray-800 mb-2">Student Form</h1>
                     </div>
-                    <div>
-                        <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Email</label>
-                        <input type="email" onChange={handleChange} value={input.email} id="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" className="bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 border-2" placeholder="john.doe@company.com" />
-                        {errors.email && (<p className="text-red-500 text-sm mt-1">{errors.email}</p>)}
-                    </div>
-                    <div>
-                        <label htmlFor="course" className="block mb-2 text-sm font-medium text-gray-900">Course</label>
-                        <select id="course" onChange={handleChange} value={input.course} className="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                            <option value="">Select Course</option>
-                            <option value="1">Full Stack Development</option>
-                            <option value="2">User Interface(UI) & User Experience(UX)</option>
-                            <option value="3">Artificial Intelligence(AI) & Machine Learning(ML)</option>
-                        </select>
-                        {errors.course && (<p className="text-red-500 text-sm mt-1">{errors.course}</p>)}
-                    </div>
-                    <div className="mt-2">
-                        <label htmlFor="gender" className="block mb-2 text-sm font-medium text-gray-900">Gender</label>
-                        <div className="flex items-center gap-4 mt-2">
-                            <label className="flex items-center gap-1">
-                                <input
-                                    type="radio"
-                                    id="gender"
-                                    value="Male"
-                                    onChange={handleChange}
-                                    checked={input.gender === "Male"}
-                                    className=" w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
-                                    name="gender"
-                                />
-                                Male
-                            </label>
-                            <label className="flex items-center gap-1">
-                                <input
-                                    type="radio"
-                                    id="gender"
-                                    value="Female"
-                                    onChange={handleChange}
-                                    checked={input.gender === "Female"}
-                                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
-                                    name="gender"
-                                />
-                                Female
-                            </label>
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                        <div>
+                            <input onChange={handleChange} value={input.name} type="text" id="name" placeholder="Name"
+                                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+                            />
+                            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                         </div>
-                        {errors.gender && <p className="text-red-500 text-sm mt-1">{errors.gender}</p>}
-                    </div>
-                    <div>
-                        <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">Password</label>
-                        <input type="password" onChange={handleChange} value={input.password} id="password" className="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="•••••••••" />
-                        {errors.password && (<p className="text-red-500 text-sm mt-1">{errors.password}</p>)}
-                    </div>
-                    <div>
-                        <label htmlFor="confirmPassword" className="block mb-2 text-sm font-medium text-gray-900">Confirm password</label>
-                        <input type="password" onChange={handleChange} value={input.confirmPassword} id="confirmPassword" className="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="•••••••••" />
-                        {errors.confirmPassword && (<p className="text-red-500 text-sm mt-1">{errors.confirmPassword}</p>)}
-                    </div>
+                        <div>
+                            <input onChange={handleChange} value={input.email} type="email" id="email" placeholder="Email"
+                                pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+                            />
+                            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                        </div>
+                        <div>
+                            <select id="course" onChange={handleChange} value={input.course}
+                                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400">
+                                <option value="">Select Course</option>
+                                <option value="1">Full Stack Development</option>
+                                <option value="2">User Interface(UI) & User Experience(UX)</option>
+                                <option value="3">Artificial Intelligence(AI) & Machine Learning(ML)</option>
+                            </select>
+                            {errors.course && <p className="text-red-500 text-sm mt-1">{errors.course}</p>}
+                        </div>
+                        <div>
+                            {/* <label className="block text-sm font-medium text-gray-700 mb-1">Gender</label> */}
+                            <div className="flex gap-4">
+                                <label className="flex items-center gap-1">
+                                    <input type="radio" id="gender" name="gender" value="Male" onChange={handleChange}
+                                        checked={input.gender === "Male"}
+                                        className="w-4 h-4 text-orange-500 focus:ring-orange-400"
+                                    />
+                                    Male
+                                </label>
+                                <label className="flex items-center gap-1">
+                                    <input type="radio" id="gender" name="gender" value="Female"
+                                        onChange={handleChange}
+                                        checked={input.gender === "Female"}
+                                        className="w-4 h-4 text-orange-500 focus:ring-orange-400"
+                                    />
+                                    Female
+                                </label>
+                            </div>
+                            {errors.gender && <p className="text-red-500 text-sm mt-1">{errors.gender}</p>}
+                        </div>
+                        <div>
+                            <input onChange={handleChange} value={input.password} type="password" id="password" placeholder="Password" className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" />
+                            {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
+                        </div>
+                        <div>
+                            <input onChange={handleChange} value={input.confirmPassword} type="password" id="confirmPassword" placeholder="Confirm Password" className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"/>
+                            {errors.confirmPassword && <p className="text-red-500 text-sm mt-1">{errors.confirmPassword}</p>}
+                        </div>
+                        <div className="flex gap-2">
+                            <button type="submit" className="w-full bg-[#544740] text-white py-2 rounded-lg hover:bg-gray-900 transition">
+                                {editUser ? "Update" : "Submit"}
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
-                    {editUser ? "Update" : "Submit"}
-                </button>
-            </form>
+            </div>
         </div>
     )
 }

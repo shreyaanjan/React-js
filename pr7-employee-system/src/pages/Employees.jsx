@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import EmployeeTable from '../components/EmployeeTable'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify';
 
 const Employees = () => {
     const navigate = useNavigate();
@@ -11,6 +12,15 @@ const Employees = () => {
         setEmployees(data);
     }, []);
     
+    const employeeDelete = (id) => {
+        const updatedEmployee = employees.filter((emp) => {
+            return emp.id !== id ;
+        })
+        setEmployees(updatedEmployee);
+        localStorage.setItem("employees", JSON.stringify(updatedEmployee));
+        toast.success("Employee Deleted Successfully !");
+    }  
+
     return (
         <section>
             <div className="container mx-auto">
@@ -18,7 +28,7 @@ const Employees = () => {
                     <h2 className="text-3xl font-semibold mt-5">Employees Details</h2>
                     <button type="button" onClick={()=>navigate("/add-employee")} className="text-white bg-blue-600 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center flex gap-2"><i className="ri-add-line"></i>Add Employees</button>
                 </div>
-                <EmployeeTable employees={employees} />
+                <EmployeeTable employees={employees} employeeDelete={employeeDelete} />
             </div>
         </section>
     )
