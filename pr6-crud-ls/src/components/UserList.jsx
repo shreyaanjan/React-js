@@ -1,4 +1,12 @@
-const UserList = ({ users }) => {
+const UserList = ({ users, deleteUser, getEditUser }) => {
+    
+    const handleEdit = (user) => {
+        getEditUser(user)
+    }
+
+    const handleDelete = (userId) => {
+        deleteUser(userId)
+    }
     return (
         <div className="container mx-auto">
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -27,8 +35,8 @@ const UserList = ({ users }) => {
                     </thead>
                     <tbody>
                         {
-                            users.map((user, idx) => {
-                                return <tr key={idx} className="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                            users.map((user) => {
+                                return <tr key={user.id} className="odd:bg-white even:bg-gray-50 border-b border-gray-200">
                                     <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                         {user.name}
                                     </th>
@@ -45,8 +53,8 @@ const UserList = ({ users }) => {
                                         {user.password}
                                     </td>
                                     <td className="flex gap-2 px-6 py-4">
-                                        <button className="font-medium text-green-600 hover:underline">Edit</button>
-                                        <button className="font-medium text-red-600 hover:underline">Delete</button>
+                                        <button onClick={()=>handleEdit(user)} className="font-medium text-green-600 hover:underline">Edit</button>
+                                        <button onClick={()=>handleDelete(user.id)} className="font-medium text-red-600 hover:underline">Delete</button>
                                     </td>
                                 </tr>
                             })
