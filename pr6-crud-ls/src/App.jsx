@@ -5,13 +5,16 @@ import UserList from "./components/UserList"
 const App = () => {
     const [users, setUsers] = useState([]);
     const [editUser, setEditUser] = useState(null);
+    const [showUserList, setShowUserList] = useState(false);
 
     const addUsers = (user) => {
         setUsers([...users, user])
+        setShowUserList(true)
     }
 
     const getEditUser = (user) => {
         setEditUser(user);
+        setShowUserList(false);
     }
 
     const updateUser = (editUser) => {
@@ -20,6 +23,7 @@ const App = () => {
         })
         setUsers(updatedUsers)
         setEditUser(null)
+        setShowUserList(true)
     }
 
     const deleteUser = (userId) => {
@@ -27,6 +31,7 @@ const App = () => {
             return user.id !== userId;
         })
         setUsers(newUsers);
+        setShowUserList(true)
     }
 
     useEffect(() => {
@@ -42,8 +47,11 @@ const App = () => {
 
     return (
         <div>
-            <Form addUsers={addUsers} editUser={editUser} updateUser={updateUser} />
-            <UserList users={users} deleteUser={deleteUser} getEditUser={getEditUser} />
+            {!showUserList ? (
+                <Form addUsers={addUsers} editUser={editUser} updateUser={updateUser} />
+            ) : (
+                <UserList users={users} deleteUser={deleteUser} getEditUser={getEditUser} goBackToForm={()=>setShowUserList(false)} />
+            )}
         </div>
     )
 }

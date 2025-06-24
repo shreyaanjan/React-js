@@ -129,7 +129,7 @@ const Form = ({ addUsers, editUser, updateUser }) => {
                             {errors.confirmPassword && <p className="text-red-500 text-sm mt-1">{errors.confirmPassword}</p>}
                         </div>
                         <div className="flex gap-2">
-                            <button type="submit" className="w-full bg-[#544740] text-white py-2 rounded-lg hover:bg-gray-900 transition">
+                            <button type="submit" className="w-full bg-[#30231b] text-white py-2 rounded-lg hover:bg-[#584031] transition">
                                 {editUser ? "Update" : "Submit"}
                             </button>
                         </div>
