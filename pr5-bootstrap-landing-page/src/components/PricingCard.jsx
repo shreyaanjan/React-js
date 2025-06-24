@@ -5,7 +5,7 @@ const PricingCard = ({ iconArr }) => {
     const { category, price } = iconArr[0];
     const features = iconArr.slice(1);
     return (
-        <div className="col-4">
+        <div className="col-lg-4 col-md-6">
             <div className="pricing-item mt-5 rounded-3">
                 <ul className="p-0 text-center">
                     <li className="pricing-header text-white rounded-top-3 mb-5">

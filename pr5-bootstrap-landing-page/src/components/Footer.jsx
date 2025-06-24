@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className="footer-section">
             <div className="container">
                 <div className="row">
-                    <div className="col-4">
+                    <div className="col-lg-4 col-md-6">
                         <div className="footer-left">
                             <Image img={img} />
                             <p className="my-4">
@@ -17,7 +17,7 @@ const Footer = () => {
                             <button className="rounded-pill head-btn text-white text-capitalize">get started</button>
                         </div>
                     </div>
-                    <div className="col-2">
+                    <div className="col-lg-2 col-md-6">
                         <div className="footer-link">
                             <h4 className="mb-4">Quick Link</h4>
                             <ul className="p-0">
@@ -29,8 +29,8 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-2">
-                        <div className="footer-link">
+                    <div className="col-lg-2 col-md-6">
+                        <div className="footer-link footer-box">
                             <h4 className="mb-4">Community</h4>
                             <ul className="p-0">
                                 <li className="my-3">Career</li>
@@ -41,8 +41,8 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-4">
-                        <div className="contact-widget">
+                    <div className="col-lg-4 col-md-6">
+                        <div className="contact-widget footer-box">
                             <div className="address">
                                 <ul className="p-0 m-0">
                                     <li className="d-flex align-items-start mb-4">

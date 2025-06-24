@@ -11,7 +11,7 @@ const Companies = () => {
         <section className="company-section">
             <div className="container">
                 <div className="row">
-                    <div className="col-4">
+                    <div className="col-lg-4">
                         <div className="company-info">
                             <h4>Trusted by the world's best companies</h4>
                             <p>
@@ -19,7 +19,7 @@ const Companies = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="col-8">
+                    <div className="col-lg-8">
                         <div className='pt-5'>
                             <Swiper
                                 slidesPerView={3}

@@ -30,7 +30,7 @@ const About = () => {
         <section className="about-section">
             <div className="container">
                 <div className="row">
-                    <div className="col-6">
+                    <div className="col-lg-6">
                         <h5 className="text-uppercase">Story about us</h5>
                         <h2>Create your app page <br /> with expert developer</h2>
                         <p className="mt-4">
@@ -61,7 +61,7 @@ const About = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-lg-6">
                         <div className="row gy-4">
                             {cardContent.map((item, idx)=>{
                                 return <AboutCard key={idx} icon={item.icon} title={item.title} desc={item.desc} />

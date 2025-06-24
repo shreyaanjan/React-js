@@ -5,7 +5,7 @@ import { FaPinterest } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 const TeamCard = ({ name, role, img }) => {
     return (
-        <div className="col-4">
+        <div className="col-lg-4 col-md-6">
             <div className="team-item">
                 <div className="image">
                     <Image img={img} />

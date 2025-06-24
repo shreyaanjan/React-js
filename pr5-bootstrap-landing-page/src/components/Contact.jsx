@@ -18,7 +18,7 @@ const Contact = () => {
             </div>
             <div className="container">
                 <div className="row mt-5">
-                    <div className="col-6">
+                    <div className="col-md-6 col-12">
                         <div className="address">
                             <h4 className="text-uppercase">Our Office Address</h4>
                             <ul className="contact-info p-0 mt-3 pb-3">
@@ -46,7 +46,7 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-md-6 col-12">
                         <div className="contact-form">
                             <h2 className="text-capitalize">Let's lalk about your idea</h2>
                             <form action="">

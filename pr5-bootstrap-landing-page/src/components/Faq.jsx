@@ -12,10 +12,10 @@ const Faq = () => {
             </div>
             <div className="container">
                 <div className="row mt-5">
-                    <div className="col-6">
+                    <div className="col-lg-6">
                         <Image img={img} />
                     </div>
-                    <div className="col-6">
+                    <div className="col-lg-6">
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>

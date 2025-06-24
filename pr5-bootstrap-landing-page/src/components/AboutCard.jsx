@@ -1,6 +1,6 @@
 const AboutCard = ({ icon: Icon, title, desc }) => {
     return (
-        <div className="col-6">
+        <div className="col-lg-6 col-md-6">
             <div className="about-card">
                 <div className="about-icon">
                     <Icon />

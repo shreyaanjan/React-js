@@ -40,11 +40,11 @@ const Features = () => {
             </div>
             <div className="container">
                 <div className="row py-5">
-                    <div className="col-5">
+                    <div className="col-xl-5">
                         <Image img={image} />
                     </div>
-                    <div className="col-7">
-                        <div className="d-flex align-items-center h-100">
+                    <div className="col-xl-7">
+                        <div className="feature-box d-flex align-items-center h-100">
                             <div className="row gy-4 ">
                                 {cardContent.map((item, idx) => {
                                     return <FeaturesCard key={idx} icon={item.icon} title={item.title} desc={item.desc} />
