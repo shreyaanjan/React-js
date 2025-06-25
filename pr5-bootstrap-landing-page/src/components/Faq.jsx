@@ -13,7 +13,9 @@ const Faq = () => {
             <div className="container">
                 <div className="row mt-5">
                     <div className="col-lg-6">
-                        <Image img={img} />
+                        <div className="d-flex align-items-center justify-content-center">
+                            <Image img={img} />
+                        </div>
                     </div>
                     <div className="col-lg-6">
                         <Accordion defaultActiveKey="0">

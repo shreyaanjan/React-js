@@ -18,7 +18,7 @@ const Header = () => {
                     <div className="logo">
                         <Image img={img} />
                     </div>
-                    <ul className="d-flex align-items-center d-none d-md-flex gap-4 m-0">
+                    <ul className="d-flex align-items-center d-none d-lg-flex gap-4 m-0">
                         <li className="text-black fw-semibold">Home</li>
                         <li className="text-black fw-semibold">Features</li>
                         <li className="text-black fw-semibold">Overview</li>
@@ -30,7 +30,7 @@ const Header = () => {
                     <div className="d-none d-lg-flex">
                         <button className="rounded-pill head-btn text-white text-capitalize">Try it free</button>
                     </div>
-                    <Button variant="primary" className="d-flex d-md-none text-black fs-3 no-bg" onClick={handleShow}>
+                    <Button variant="primary" className="d-flex d-lg-none text-black fs-3 no-bg" onClick={handleShow}>
                         <RiMenuFill />
                     </Button>
                 </div>

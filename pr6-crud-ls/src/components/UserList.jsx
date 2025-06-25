@@ -14,7 +14,7 @@ const UserList = ({ users, deleteUser, getEditUser, goBackToForm }) => {
                         onClick={goBackToForm}
                         className="px-4 py-2 bg-[#d3936b] hover:bg-[#aa795b] text-white rounded-lg"
                     >
-                        Add New User
+                        Add New Student
                     </button>
                 </div>
             ) : (
@@ -74,7 +74,7 @@ const UserList = ({ users, deleteUser, getEditUser, goBackToForm }) => {
                     </div>
                     <div>
                         <button onClick={goBackToForm} className="mt-4 px-4 py-2 bg-[#d3936b] hover:bg-[#aa795b] text-white rounded-lg ">
-                            Add New User
+                            Add New Student
                         </button>
                     </div>
                 </div>

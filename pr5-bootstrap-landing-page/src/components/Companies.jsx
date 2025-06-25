@@ -22,26 +22,44 @@ const Companies = () => {
                     <div className="col-lg-8">
                         <div className='pt-5'>
                             <Swiper
-                                slidesPerView={3}
-                                spaceBetween={30}
-                                pagination={{clickable: true,}}
+                                breakpoints={{
+                                    0: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 10,
+                                    },
+                                    560: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 15,
+                                    },
+                                    992: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 20,
+                                    },
+                                }}
                                 navigation={true}
-                                modules={[Pagination, Navigation]} 
+                                modules={[Pagination, Navigation]}
                                 className="mySwiper">
-                                <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-                                    <SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="d-flex justify-content-center">
                                         <Image img={imgOne} width={100} />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <Image img={imgTwo} />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <Image img={imgThree} />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <Image img={imgFour} />
-                                    </SwiperSlide>
-                                </Swiper>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="d-flex justify-content-center">
+                                        <Image img={imgTwo} width={100} />
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="d-flex justify-content-center">
+                                        <Image img={imgThree} width={100} />
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="d-flex justify-content-center">
+                                        <Image img={imgFour} width={100} />
+                                    </div>
+                                </SwiperSlide>
+
                             </Swiper>
                         </div>
                     </div>

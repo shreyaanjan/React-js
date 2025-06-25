@@ -512,7 +512,7 @@ sub {
     font-weight: 700;
 }
 
-.footer-link ul li{
+.footer-link ul li {
     color: #666666;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -592,7 +592,7 @@ sub {
     }
 
     .hero-btn button {
-        display: block; 
+        display: block;
         margin: 0 auto;
         margin-block-end: 60px;
         margin-block-start: 30px;
@@ -602,42 +602,59 @@ sub {
         padding: 70px;
     }
 
-    .feature-box{
+    .feature-box {
         margin-block-start: 30px;
     }
 
-    .title p{
+    .title p {
         padding: 0px;
     }
 
-    .footer-box{
+    .footer-box {
         margin-block-start: 50px;
     }
 
-    .contact-form{
+    .contact-form {
         margin-block-start: 50px;
-    }
-
-    .faq-section img {
-        display: none;
     }
 }
 
-@media (max-width:768px){
-    .footer-link{
+@media (max-width:768px) {
+    .footer-link {
         margin-block-start: 50px;
     }
-    .about-card{
+
+    .about-card {
         text-align: center;
     }
-    .feature-item{
+
+    .feature-item {
         padding-left: 0px !important;
+    }
+
+    .hero-content h1 {
+        text-align: left;
+        font-size: 30px;
+    }
+
+    .hero-content p{
+        text-align: left;
+    }
+
+    .hero-section{
+        padding: 0px;
+    }
+
+    .hero-btn button{
+        margin: 0px !important;
+    }
+    .hero-img{
+        margin-block-start: 30px;
     }
 }
 
-@media (max-width:1199px){
-    
-    .feature-box{
+@media (max-width:1199px) {
+    .feature-box {
         margin-block-start: 30px;
     }
 }
