@@ -41,7 +41,9 @@ const Features = () => {
             <div className="container">
                 <div className="row py-5">
                     <div className="col-xl-5">
-                        <Image img={image} />
+                        <div className="d-flex align-items-center justify-content-center">
+                            <Image img={image} />
+                        </div>
                     </div>
                     <div className="col-xl-7">
                         <div className="feature-box d-flex align-items-center h-100">
