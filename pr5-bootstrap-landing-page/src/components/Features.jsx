@@ -9,7 +9,7 @@ import FeaturesCard from "./FeaturesCard";
 const Features = () => {
     let title = "Our Features";
     let desc = "Learning day desirous informed expenses material returned six the.She enabled invited exposed him another.Reasonably conviction solicitude me mr at discretion"
-    let image = "/public/images/feature-1.png"
+    let image = "/images/feature-1.png"
 
     let cardContent = [
         {

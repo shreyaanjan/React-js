@@ -10,19 +10,19 @@ const Testimonial = () => {
             text: `Understood instrument or do connection no appearance do invitation. Dried quick round it or order. Add past see west felt did any. Say out noise you taste merry plate you share. My resolve arrived is we chamber be removal.`,
             name: "Junl Sarukh",
             role: "CEO Of Softing",
-            image: "/public/images/testimony-1.jpg"
+            image: "/images/testimony-1.jpg"
         },
         {
             text: `Understood instrument or do connection no appearance do invitation. Dried quick round it or order. Add past see west felt did any. Say out noise you taste merry plate you share. My resolve arrived is we chamber be removal.`,
             name: "Anil Spia",
             role: "Director of Softing",
-            image: "/public/images/testimony-2.jpg"
+            image: "/images/testimony-2.jpg"
         },
         {
             text: `Understood instrument or do connection no appearance do invitation. Dried quick round it or order. Add past see west felt did any. Say out noise you taste merry plate you share. My resolve arrived is we chamber be removal.`,
             name: "Paul Munni",
             role: "Developer of Softing",
-            image: "/public/images/testimony-3.jpg"
+            image: "/images/testimony-3.jpg"
         }
     ];
     return (

@@ -3,7 +3,7 @@ import { FaHome } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";;
 import { FaPhoneAlt } from "react-icons/fa";
 const Footer = () => {
-    let img = "/public/images/logo.png"
+    let img = "/images/logo.png"
     return (
         <footer className="footer-section">
             <div className="container">

@@ -68,7 +68,7 @@ const Form = ({ addUsers, editUser, updateUser }) => {
     return (
         <div className="flex min-h-screen">
             <div className="hidden lg:flex w-1/2 bg-white justify-center items-center">
-                <img src="https://brandio.io/envato/iofrm/html/images/graphic10.svg" alt="Team work illustration" className="max-w-[80%]" />
+                <img src="./images/home.svg" alt="Team work illustration" className="max-w-[80%]" />
             </div>
             <div className="w-full lg:w-1/2 bg-[#d3936b] flex items-center justify-center">
                 <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 w-full max-w-lg">

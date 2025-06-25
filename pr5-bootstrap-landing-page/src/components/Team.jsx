@@ -7,17 +7,17 @@ const Team = () => {
 
     let cardContent = [
         {
-            img: "/public/images/team-1.jpg",
+            img: "/images/team-1.jpg",
             name: "Ahmed Kamal",
             role: "Developer of Softing",
         },
         {
-            img: "/public/images/team-2.jpg",
+            img: "/images/team-2.jpg",
             name: "Drunal Park",
             role: "Manager of Softing",
         },
         {
-            img: "/public/images/team-3.jpg",
+            img: "/images/team-3.jpg",
             name: "Munia Ankor",
             role: "Founder of Softing",
         },

@@ -4,7 +4,7 @@ import Accordion from 'react-bootstrap/Accordion';
 const Faq = () => {
     let title = "Answer & Question";
     let desc = "Learning day desirous informed expenses material returned six the.She enabled invited exposed him another.Reasonably conviction solicitude me mr at discretion";
-    let img = "/public/images/faq.png"
+    let img = "/images/faq.png"
     return (
         <section className="faq-section">
             <div className="container">

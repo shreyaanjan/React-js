@@ -10,7 +10,7 @@ const Header = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    let img = "/public/images/logo.png"
+    let img = "/images/logo.png"
     return (
         <header className="header-section">
             <div className="container">

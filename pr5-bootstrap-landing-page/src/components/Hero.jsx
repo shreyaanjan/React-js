@@ -1,7 +1,7 @@
 import Image from "./Image"
 
 const Hero = () => {
-    let image = "/public/images/hero-1.png";
+    let image = "/images/hero-1.png";
 
     return (
         <section className="hero-section">

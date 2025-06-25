@@ -3,10 +3,10 @@ import { Pagination, Navigation } from 'swiper/modules';
 import Image from './Image';
 
 const Companies = () => {
-    let imgOne = "/public/images/company-1.png";
-    let imgTwo = "/public/images/company-2.png";
-    let imgThree = "/public/images/company-3.png";
-    let imgFour = "/public/images/company-4.png";
+    let imgOne = "/images/company-1.png";
+    let imgTwo = "/images/company-2.png";
+    let imgThree = "/images/company-3.png";
+    let imgFour = "/images/company-4.png";
     return (
         <section className="company-section">
             <div className="container">
