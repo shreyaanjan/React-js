@@ -27,7 +27,7 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
                                 <Link to={"/"} className={`${pathname == "/" ? "text-teal-700" : "text-gray-900"}`}>Home</Link>
                             </li>
                             <li>
-                                <Link to={"/about"} className={`${pathname == "/about" ? "text-teal-700" : "text-gray-900"}`}>About</Link>
+                                <Link to={"/services"} className={`${pathname == "/services" ? "text-teal-700" : "text-gray-900"}`}>Services</Link>
                             </li>
                             <li>
                                 <Link to={"/contact"} className={`${pathname == "/contact" ? "text-teal-700" : "text-gray-900"}`}>Contact</Link>
