@@ -5,6 +5,7 @@ const EmployeeTable = ({ employees, employeeDelete }) => {
     const handleDelete = (id) =>{
         employeeDelete(id);
     }
+
     return (
         <div className="relative overflow-x-auto mt-5">
             <table className="w-full text-sm text-left  text-gray-500">
@@ -36,7 +37,7 @@ const EmployeeTable = ({ employees, employeeDelete }) => {
                                 <td className="px-6 py-4 text-gray-900">{emp.salary}</td>
                                 <td className="px-6 py-4 text-gray-900">{emp.department == 1 ? "Designing" : emp.department == 2 ? "Development" : emp.department == 3 ? "Finance" : "Sales and Marketing"}</td>
                                 <td className="px-6 py-4 flex gap-5">
-                                    <Link  className="font-medium text-green-600">Edit</Link>
+                                    <Link to={`/edit-employee/${emp.id}`} className="font-medium text-green-600">Edit</Link>
                                     <button onClick={()=> handleDelete(emp.id)} className="font-medium text-red-600">Delete</button>
                                 </td>
                             </tr>

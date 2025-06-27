@@ -3,7 +3,7 @@ import { toast } from "react-toastify"
 
 const Header = ({ isLoggedIn, setIsLoggedIn }) => {
     const navigate = useNavigate();
-    
+
     const { pathname } = useLocation();
 
     const handleClick = () => {
@@ -14,32 +14,31 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
     }
 
     return (
-        <header>
-            <nav className="bg-white border-gray-200">
+        <header className="">
+            <nav className="bg-color-header">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <Link to={"/"} className="flex items-center space-x-3 rtl:space-x-reverse">
-                        <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap ">Flowbite</span>
+                        <img src="/images/logo.png" className="h-8" alt="logo" />
                     </Link>
                     <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-                        <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+                        <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
                             <li>
-                                <Link to={"/"} className={`${pathname == "/" ? "text-teal-700" : "text-gray-900"}`}>Home</Link>
+                                <Link to={"/"} className={`${pathname == "/" ? "text-[#bbb]" : "text-white"}`}>Home</Link>
                             </li>
                             <li>
-                                <Link to={"/services"} className={`${pathname == "/services" ? "text-teal-700" : "text-gray-900"}`}>Services</Link>
+                                <Link to={"/services"} className={`${pathname == "/services" ? "text-[#bbb]" : "text-white"}`}>Services</Link>
                             </li>
                             <li>
-                                <Link to={"/contact"} className={`${pathname == "/contact" ? "text-teal-700" : "text-gray-900"}`}>Contact</Link>
+                                <Link to={"/contact"} className={`${pathname == "/contact" ? "text-[#bbb]" : "text-white"}`}>Contact</Link>
                             </li>
-                            {isLoggedIn && (<Link to={"/employees"} className={`${pathname == "/employees" || pathname == "/add-employee" ? "text-teal-700" : "text-gray-900"}`}>Employees</Link>)}
+                            {isLoggedIn && (<Link to={"/employees"} className={`${pathname == "/employees" || pathname == "/add-employee" || pathname.includes("/edit-employee") ? "text-[#bbb]" : "text-white"}`}>Employees</Link>)}
                         </ul>
                     </div>
                     {
                         isLoggedIn ? <button onClick={handleClick} type="button" className="text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Logout</button>
                             : <button onClick={() => {
                                 navigate("/login")
-                            }} type="button" className="text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Login</button>
+                            }} type="button" className="text-white bg-[#03228f] hover:bg-transparent focus:border-[#03228f] ring-white focus:ring-1 font-medium rounded-lg text-sm px-9 py-2 text-center">Login</button>
                     }
                 </div>
             </nav>

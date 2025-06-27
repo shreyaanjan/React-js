@@ -8,6 +8,8 @@ import Login from "./pages/Login"
 import { useEffect, useState } from 'react';
 import Employees from './pages/Employees';
 import AddEmployee from './pages/AddEmployee';
+import EditEmployee from './pages/EditEmployee';
+import ProtectedRoutes from './components/ProtectedRoutes';
 
 const App = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -25,8 +27,9 @@ const App = () => {
                 <Route path="/services" element={<Services/>} />
                 <Route path="/contact" element={<Contact/>} />
                 <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn}/>} />
-                <Route path="/employees" element={<Employees/>} />
-                <Route path="/add-employee" element={<AddEmployee/>} />
+                <Route path="/employees" element={<ProtectedRoutes Component={Employees} />}/>
+                <Route path="/add-employee" element={<ProtectedRoutes Component={AddEmployee} />} /> 
+                <Route path="/edit-employee/:id" element={<ProtectedRoutes Component={EditEmployee} />} /> 
             </Routes>
             <ToastContainer />
         </BrowserRouter>

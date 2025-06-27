@@ -5,3 +5,7 @@
 *{
     outline: none;
 }
+
+.bg-color-header{
+    background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%) !important;
+}
