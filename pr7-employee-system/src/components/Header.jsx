@@ -10,11 +10,11 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
         setIsLoggedIn(false);
         localStorage.setItem("isLoggedIn", JSON.stringify(false))
         toast.success("Logged Out Successfully")
-        navigate("/")
+        navigate("/login")
     }
 
     return (
-        <header className="">
+        <header>
             <nav className="bg-color-header">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <Link to={"/"} className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -35,10 +35,10 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
                         </ul>
                     </div>
                     {
-                        isLoggedIn ? <button onClick={handleClick} type="button" className="text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Logout</button>
+                        isLoggedIn ? <button onClick={handleClick} type="button" className="text-white bg-[#03228f] hover:bg-[#1b2e74ab] focus:border-[#03228f] ring-slate-200 focus:ring-1 font-medium rounded-lg text-sm px-9 py-2 text-center transition-all duration-300">Logout</button>
                             : <button onClick={() => {
                                 navigate("/login")
-                            }} type="button" className="text-white bg-[#03228f] hover:bg-transparent focus:border-[#03228f] ring-white focus:ring-1 font-medium rounded-lg text-sm px-9 py-2 text-center">Login</button>
+                            }} type="button" className="text-white bg-[#03228f] hover:bg-[#1b2e74ab] focus:border-[#03228f] ring-slate-200 focus:ring-1 font-medium rounded-lg text-sm px-9 py-2 text-center transition-all duration-300">Login</button>
                     }
                 </div>
             </nav>
