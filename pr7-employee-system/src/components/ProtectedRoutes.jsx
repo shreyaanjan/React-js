@@ -13,7 +13,7 @@ const ProtectedRoutes = ({Component}) => {
     
     return (
         <>
-            <Component />
+            <Component/>
         </>
     )
 }

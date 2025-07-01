@@ -37,3 +37,11 @@
     cursor: pointer;
     color: #106EEA;
 }
+
+.contact-left{
+    background: linear-gradient(250deg, #4E95ED 0%, #03228F 100%);;
+}
+
+.contact-left h4, h2{
+    font-family: "Livvic", sans-serif;
+}

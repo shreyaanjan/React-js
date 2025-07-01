@@ -10,6 +10,7 @@ import Employees from './pages/Employees';
 import AddEmployee from './pages/AddEmployee';
 import EditEmployee from './pages/EditEmployee';
 import ProtectedRoutes from './components/ProtectedRoutes';
+import ProtectedRouteTwo from './components/ProtectedRouteTwo';
 
 const App = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -17,19 +18,23 @@ const App = () => {
     useEffect(() => {
         let loginStatus = JSON.parse(localStorage.getItem("isLoggedIn"))
         setIsLoggedIn(loginStatus)
-    },[])
+    }, [])
 
     return (
         <BrowserRouter>
             <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="/services" element={<Services/>} />
-                <Route path="/contact" element={<Contact/>} />
-                <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn}/>} />
-                <Route path="/employees" element={<ProtectedRoutes Component={Employees} />}/>
-                <Route path="/add-employee" element={<ProtectedRoutes Component={AddEmployee} />} /> 
-                <Route path="/edit-employee/:id" element={<ProtectedRoutes Component={EditEmployee} />} /> 
+                <Route path="/" element={<Home />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/login" element={
+                    <ProtectedRouteTwo isLoggedIn={isLoggedIn}>
+                        <Login setIsLoggedIn={setIsLoggedIn} />
+                    </ProtectedRouteTwo>
+                }/>
+                <Route path="/employees" element={<ProtectedRoutes Component={Employees} />} />
+                <Route path="/add-employee" element={<ProtectedRoutes Component={AddEmployee} />} />
+                <Route path="/edit-employee/:id" element={<ProtectedRoutes Component={EditEmployee} />} />
             </Routes>
             <ToastContainer />
         </BrowserRouter>

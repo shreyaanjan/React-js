@@ -32,16 +32,15 @@ const Services = () => {
             title: "Data Center",
             desc: "At vero eos et accusamus etiusto odio praesentium accusamus etiusto odio data center for managing database.",
         },
-
     ]
     return (
-        <section className="service-section p-3">
+        <section className="service-section py-[40px]">
             <div className="container mx-auto">
                 <p className="text-center text-[#03228F] uppercase">Services</p>
                 <h2 className="text-3xl font-bold text-center my-4">We Are Offering All Kinds of IT Solutions Services</h2>
             </div>
             <div className="container mx-auto">
-                <div className="flex flex-wrap">
+                <div className="flex flex-wrap py-[30px]">
                     {
                         cardContent.map((item, idx)=>{
                             return <ServicesCard key={idx} img={item.img} title={item.title} desc={item.desc} />
