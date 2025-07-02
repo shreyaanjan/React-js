@@ -26,7 +26,7 @@ const Employees = () => {
             <div className="container mx-auto">
                 <div className="flex items-center justify-between">
                     <h2 className="text-3xl font-semibold mt-5">Employees Details</h2>
-                    <button type="button" onClick={()=>navigate("/add-employee")} className="text-white bg-blue-600 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center flex gap-2"><i className="ri-add-line"></i>Add Employees</button>
+                    <button type="button" onClick={()=>navigate("/add-employee")} className="text-white bg-blue-600 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center flex gap-2 mt-4"><i className="ri-add-line"></i>Add Employees</button>
                 </div>
                 <EmployeeTable employees={employees} employeeDelete={employeeDelete} />
             </div>

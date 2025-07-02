@@ -26,7 +26,8 @@ const AddEmployee = () => {
     }
 
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto py-[30px]">
+            <h2 className="text-3xl font-semibold mb-5">Add Employee</h2>
             <form onSubmit={handleSubmit}>
                 <div className="grid gap-6 mb-6 md:grid-cols-2 items-center">
                     <div>

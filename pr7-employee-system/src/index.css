@@ -19,7 +19,7 @@
     background: linear-gradient(160deg, #0B70E1 0%, #03228F 77%);
 }
 
-.service-section {
+.service-section, .contact-section {
     background: #F6F7F9;
 }
 

@@ -9,7 +9,7 @@ const EmployeeTable = ({ employees, employeeDelete }) => {
     return (
         <div className="relative overflow-x-auto mt-5">
             <table className="w-full text-sm text-left  text-gray-500">
-                <thead className="text-xs text-white uppercase bg-teal-600">
+                <thead className="text-xs text-white uppercase bg-blue-500">
                     <tr>
                         <th scope="col" className="px-6 py-3">
                             Number
@@ -36,9 +36,9 @@ const EmployeeTable = ({ employees, employeeDelete }) => {
                                 <td className="px-6 py-4 text-gray-900">{emp.name}</td>
                                 <td className="px-6 py-4 text-gray-900">{emp.salary}</td>
                                 <td className="px-6 py-4 text-gray-900">{emp.department == 1 ? "Designing" : emp.department == 2 ? "Development" : emp.department == 3 ? "Finance" : "Sales and Marketing"}</td>
-                                <td className="px-6 py-4 flex gap-5">
-                                    <Link to={`/edit-employee/${emp.id}`} className="font-medium text-green-600">Edit</Link>
-                                    <button onClick={()=> handleDelete(emp.id)} className="font-medium text-red-600">Delete</button>
+                                <td className="px-6 py-4 flex items-center gap-5">
+                                    <Link to={`/edit-employee/${emp.id}`} className="text-base text-green-600"><i className="fa-solid fa-pen-to-square"></i></Link>
+                                    <button onClick={()=> handleDelete(emp.id)} className="text-base text-red-600"><i className="fa-solid fa-trash"></i></button>
                                 </td>
                             </tr>
                         })
