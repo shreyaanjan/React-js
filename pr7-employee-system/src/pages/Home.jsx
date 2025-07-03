@@ -1,6 +1,6 @@
 const Home = () => {
     return (
-        <section className="bg-gradient-to-b from-white to-[#eae4ff] min-h-[90px] flex items-center justify-center py-[50px]">
+        <section className="bg-gradient-to-b from-white to-[#eae4ff] h-[92.5vh] flex items-center justify-center py-[50px]">
             <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-3">
                 <div className="lg:w-1/2 space-y-6">
                     <p className="text-sm text-orange-600 font-semibold tracking-wide uppercase">Technology & IT Solutions</p>
