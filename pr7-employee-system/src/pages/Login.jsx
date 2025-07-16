@@ -28,24 +28,35 @@ const Login = ({ setIsLoggedIn }) => {
 
     return (
         <section>
-            <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto h-[80vh] lg:py-0">
-                <div className="w-full bg-white rounded-sm shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
-                    <div className="p-6 space-y-4 md:space-y-6 sm:p-7">
-                        <h1 className="text-xl font-bold text-gray-900 md:text-2xl">
-                            Let’s Get You Logged In
-                        </h1>
-                        <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6" action="#">
-                            <div>
-                                <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Email</label>
-                                <input onChange={handleChange} type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-800 rounded-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="name@mail.com" />
-                            </div>
-                            <div>
-                                <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">Password</label>
-                                <input onChange={handleChange} type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-800 rounded-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" />
-                            </div>
-                            <button type="submit" className="w-full text-white sign-in-btn font-medium rounded-sm text-sm py-2.5 text-center transition-all duration-300">Sign In</button>
-                        </form>
-                    </div>
+            <div className="min-h-screen flex items-center justify-center bg-gray-50">
+                <div className="w-full bg-white rounded-md shadow-md sm:max-w-md p-8">
+                    <h1 className="text-2xl font-bold text-gray-900 mb-6">Login</h1>
+                    <form onSubmit={handleSubmit} className="space-y-5">
+                        <div>
+                            <label htmlFor="email" className="block mb-1 text-sm font-semibold text-gray-900">
+                                Username or email
+                            </label>
+                            <input onChange={handleChange} type="email" name="email" id="email"
+                                placeholder="Username or email" className="bg-gray-100 border border-gray-200 text-gray-900 text-sm rounded-sm block w-full p-3 focus:outline-none focus:ring-2 focus:ring-orange-500" />
+                        </div>
+                        <div>
+                            <label htmlFor="password" className="block mb-1 text-sm font-semibold text-gray-900">
+                                Password
+                            </label>
+                            <input onChange={handleChange}
+                                type="password"
+                                name="password"
+                                id="password"
+                                placeholder="Password"
+                                className="bg-gray-100 border border-gray-200 text-gray-900 text-sm rounded-sm block w-full p-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                            />
+                        </div>
+                        <button
+                            type="submit"
+                            className="w-full bg-[#ff5d22] hover:bg-[#e24d14] text-white text-sm font-semibold py-3 rounded-sm transition-all duration-300">
+                            Log In
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>

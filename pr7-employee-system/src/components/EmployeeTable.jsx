@@ -9,7 +9,7 @@ const EmployeeTable = ({ employees, employeeDelete }) => {
     return (
         <div className="relative overflow-x-auto mt-5">
             <table className="w-full text-sm text-left  text-gray-500">
-                <thead className="text-xs text-white uppercase bg-blue-500">
+                <thead className="text-xs text-white uppercase bg-[#fb923c]">
                     <tr>
                         <th scope="col" className="px-6 py-3">
                             Number

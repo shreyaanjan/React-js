@@ -1,52 +1,28 @@
 const Contact = () => {
     return (
-        <section className="contact-section py-[30px]"> 
-            <div className="container mx-auto">
-                <div className="flex flex-col md:flex-row">
-                    <div className="md:w-5/12 w-full bg-gradient-to-b from-blue-500 to-blue-800 text-white p-10 flex flex-col justify-center">
-                        <h4 className="text-sm uppercase tracking-wide mb-2">Let's Talk</h4>
-                        <h1 className="text-3xl md:text-4xl font-bold mb-8">Speak With Expert Engineers.</h1>
-                        <div className="space-y-6">
-                            <div className="flex items-center space-x-4">
-                                <div className="bg-white text-blue-700 px-3 py-2 rounded-full">
-                                    <i className="fas fa-home"></i>
-                                </div>
-                                <div>
-                                    <p className="font-bold">Email:</p>
-                                    <p>(+088)589-8745</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center space-x-4">
-                                <div className="bg-white text-blue-700 px-3 py-2 rounded-full">
-                                    <i className="fas fa-phone-alt"></i>
-                                </div>
-                                <div>
-                                    <p className="font-bold">Phone:</p>
-                                    <p>support@rstheme.com</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center space-x-4">
-                                <div className="bg-white text-blue-700 px-3 py-2 rounded-full">
-                                    <i className="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div>
-                                    <p className="font-bold">Address:</p>
-                                    <p>New Jesrsy, 1201, USA</p>
-                                </div>
-                            </div>
-                        </div>
+        <section className="py-20 bg-white">
+            <div className="container mx-auto px-6">
+                <div className="text-center mb-10">
+                    <div className="flex items-center justify-center gap-2">
+                        <img src="/images/star-icon.png" alt="" className="mb-4 w-8 h-8" />
+                        <p className="text-sm text-[#ff5d22] font-semibold uppercase mb-2">Get In Touch</p>
                     </div>
-                    <div className="md:w-7/12 w-full p-10 flex flex-col justify-center">
-                        <p className="text-blue-500 font-medium uppercase mb-2">Get In Touch</p>
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">Fill The Form Below</h2>
-                        <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" placeholder="Name" className="p-3 rounded-md border border-gray-300 focus:outline-none" />
-                            <input type="email" placeholder="E-Mail" className="p-3 rounded-md border border-gray-300 focus:outline-none" />
-                            <input type="text" placeholder="Phone Number" className="p-3 rounded-md border border-gray-300 focus:outline-none" />
-                            <input type="text" placeholder="Your Website" className="p-3 rounded-md border border-gray-300 focus:outline-none" />
-                            <textarea placeholder="Your Message Here" className="md:col-span-2 p-3 rounded-md border border-gray-300 h-32 resize-none focus:outline-none"></textarea>
-                            <button className="md:col-span-2 w-48 bg-gradient-to-r from-blue-700 to-blue-500 text-white py-3 px-6 rounded-full hover:opacity-90 transition-all">
-                                Submit Now
+                    <h2 className="text-3xl md:text-4xl font-bold mb-2">Ready to Get Started?</h2>
+                    <p className="text-sm text-gray-500">Your email address will not be published. Required fields are marked <span className="text-red-500">*</span></p>
+                </div>
+                <div className="flex flex-col lg:flex-row items-center gap-10">
+                    <div className="w-full lg:w-1/2 flex justify-center">
+                        <img src="/images/contact.png" alt="Contact Illustration" className="w-full max-w-md" />
+                    </div>
+                    <div className="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-md">
+                        <form className="space-y-4">
+                            <input type="text" placeholder="Name" className="w-full p-3 bg-gray-100 border border-gray-200 rounded-md focus:outline-none" />
+                            <input type="email" placeholder="Email" className="w-full p-3 bg-gray-100 border border-gray-200 rounded-md focus:outline-none" />
+                            <input type="text" placeholder="Phone number" className="w-full p-3 bg-gray-100 border border-gray-200 rounded-md focus:outline-none" />
+                            <input type="text" placeholder="Subject" className="w-full p-3 bg-gray-100 border border-gray-200 rounded-md focus:outline-none" />
+                            <textarea placeholder="Write your message..." className="w-full h-32 p-3 bg-gray-100 border border-gray-200 rounded-md resize-none focus:outline-none"></textarea>
+                            <button className="bg-[#ff5d22] text-white px-6 py-3 rounded-md font-semibold flex items-center gap-2 hover:bg-[#e24d14] transition-all">
+                                <span>✔</span> Send Message
                             </button>
                         </form>
                     </div>
