@@ -1,18 +1,40 @@
 const Contact = () => {
     return (
-        <section className="py-20 bg-white">
-            <div className="container mx-auto px-6">
-                <div className="text-center mb-10">
-                    <div className="flex items-center justify-center gap-2">
-                        <img src="/images/star-icon.png" alt="" className="mb-4 w-8 h-8" />
-                        <p className="text-sm text-[#ff5d22] font-semibold uppercase mb-2">Get In Touch</p>
-                    </div>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-2">Ready to Get Started?</h2>
-                    <p className="text-sm text-gray-500">Your email address will not be published. Required fields are marked <span className="text-red-500">*</span></p>
-                </div>
-                <div className="flex flex-col lg:flex-row items-center gap-10">
-                    <div className="w-full lg:w-1/2 flex justify-center">
-                        <img src="/images/contact.png" alt="Contact Illustration" className="w-full max-w-md" />
+        <section className="contact-section py-[30px]"> 
+            <div className="container mx-auto">
+                <div className="flex flex-col md:flex-row">
+                    <div className="md:w-5/12 w-full bg-gradient-to-b from-blue-500 to-blue-800 text-white p-10 flex flex-col justify-center">
+                        <h4 className="text-sm uppercase tracking-wide mb-2">Let's Talk</h4>
+                        <h1 className="text-3xl md:text-4xl font-bold mb-8">Speak With Expert Engineers.</h1>
+                        <div className="space-y-6">
+                            <div className="flex items-center space-x-4">
+                                <div className="bg-white text-blue-700 px-3 py-2 rounded-full">
+                                    <i className="fas fa-home"></i>
+                                </div>
+                                <div>
+                                    <p className="font-bold">Email:</p>
+                                    <p>(+088)589-8745</p>
+                                </div>
+                            </div>
+                            <div className="flex items-center space-x-4">
+                                <div className="bg-white text-blue-700 px-3 py-2 rounded-full">
+                                    <i className="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <p className="font-bold">Phone:</p>
+                                    <p>support@rstheme.com</p>
+                                </div>
+                            </div>
+                            <div className="flex items-center space-x-4">
+                                <div className="bg-white text-blue-700 px-3 py-2 rounded-full">
+                                    <i className="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <p className="font-bold">Address:</p>
+                                    <p>New Jesrsy, 1201, USA</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-md">
                         <form className="space-y-4">
