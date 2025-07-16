@@ -47,7 +47,7 @@ const EditEmployee = () => {
     }
 
     return (
-        <div className="container mx-auto py-[30px]">
+        <div className="container mx-auto pt-[100px]">
             <h2 className="text-3xl font-semibold mb-5">Edit Employee</h2>
             <form onSubmit={handleUpdate}>
                 <div className="grid gap-6 mb-6 md:grid-cols-2 items-center">
