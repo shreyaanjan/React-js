@@ -19,7 +19,7 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
                 <nav>
                     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                         <Link to={"/"} className="flex items-center space-x-3 rtl:space-x-reverse">
-                            <img src="/images/logo.png" className="h-8" alt="logo" />
+                            <img src="/images/logo.png" alt="logo" />
                         </Link>
                         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
                             <ul className="font-bold flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">

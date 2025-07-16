@@ -1,7 +1,6 @@
 const Home = () => {
     return (
-
-        <section className="home-section bg-gradient-to-b from-white to-[#eae4ff] min-h-screen flex items-center py-16">
+        <section className="home-section bg-gradient-to-b from-white to-[#eae4ff] min-h-screen flex items-center pt-32">
             <div className="container mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-8">
                 <div className="lg:w-[48%] space-y-6">
                     <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">

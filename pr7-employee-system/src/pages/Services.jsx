@@ -50,7 +50,6 @@ const Services = () => {
                         }
                     </div>
                 </div>
-                
             </div>
         </section>
 
