@@ -1,19 +1,9 @@
 {
-    "users" : [
-        {
-            "id" : "1",
-            "name" : "Shreya Anjan",
-            "age" : 20
-        },
-        {
-            "id" : "2",
-            "name" : "Sneha Chauhan",
-            "age" : 20
-        },
-        {
-            "id" : "3",
-            "name" : "Jinal Shingala",
-            "age" : 20
-        }
-    ]
+  "users": [
+    {
+      "id": "324c",
+      "name": "shreya anjam",
+      "age": "999999"
+    }
+  ]
 }
