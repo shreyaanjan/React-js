@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react"
 
 const App = () => {
-    const [users, setUsers] = useState([])
-
-    const idRef = useRef(null);
     const [input, setInput] = useState({ name: "", age: "" })
+    const [users, setUsers] = useState([])
+   
+    const idRef = useRef(null);
 
     const URL = "http://localhost:9000/users"
 
