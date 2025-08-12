@@ -1,4 +1,4 @@
-import { addDoc, collection, deleteDoc, doc, getDocs } from "firebase/firestore"
+import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from "firebase/firestore"
 import { useEffect, useState } from "react"
 import { db } from "./config/firebase"
 
@@ -48,7 +48,13 @@ const App = () => {
     console.log(isEdit);
 
     const updateBook = async () => {
-
+        try {
+            await updateDoc(doc(db, "books", isEdit), input)
+            displayBook()
+            setInput({ name: '', author: '', isBn: '' })
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return (
